@@ -1,11 +1,11 @@
 
 body {
-    background-color: #34495e;
     color: #ecf0f1;
 }
 
 .jumbotron {
     background-color: transparent;
+    padding-left: 15px !important;
 }
 
 .jumbotron h1 {
