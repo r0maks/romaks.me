@@ -31,7 +31,7 @@ body {
 .hvr-grow:hover,
 .hvr-grow:focus,
 .hvr-grow:active {
-    transform: scale(1.01);
+    transform: scale(1.05);
 }
 
 .interactive {
@@ -55,6 +55,5 @@ body {
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: #ecf0f1;
     background-color: transparent; 
-    text-shadow: 2px 2px #e74c3c;
     transform: scale(1.05);
 }
