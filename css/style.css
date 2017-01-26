@@ -37,3 +37,24 @@ body {
 .interactive {
     cursor:pointer;
 }
+
+.nav-option {
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration:none;
+    color: #34495e;
+    padding-top: 0px !important;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: transparent; 
+    color: #ecf0f1;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #ecf0f1;
+    background-color: transparent; 
+    text-shadow: 2px 2px #e74c3c;
+    transform: scale(1.05);
+}
