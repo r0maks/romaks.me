@@ -1,7 +1,7 @@
 
 body {
     color: #ecf0f1;
-    background-color: #34495e;
+    background-color: #e7e7e7;
 }
 
 .jumbotron {
@@ -32,6 +32,17 @@ img.displayed {
     margin-right: auto;
 }
 
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 150px;
+    height: 150px;
+    padding-top: 0;
+}
+
+.navbar-default{
+    background-color: #34495e;
+}
+
 .center-pills {
     display: flex;
     justify-content: center;
@@ -55,14 +66,8 @@ img.displayed {
     padding-top: 0px !important;
 }
 
-.nav > li > a:hover, .nav > li > a:focus {
-    text-decoration: none;
-    background-color: transparent; 
-    color: #ecf0f1;
-}
-
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-    color: #e74c3c;
-    background-color: transparent; 
-    transform: scale(1.05);
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active {
+    color: #555;
+    background-color: #e7e7e7;
+    font-weight: bold;
 }

@@ -19,20 +19,27 @@
 
 <body>
 
-    <div class="container">
-        <div class="jumbotron">
-            <h1 style="margin-bottom: 0px;">
-                <!--<img src="images/pic.png" style="padding-right: 15px" class="img-rounded hvr-grow interactive" width="200">-->
-                <img src="images/romaks_logo.png" ng-click="vm.setTab(0)" style="margin-bottom: 15px;" class="displayed hvr-grow interactive" width="650">
-</h1>
-<ul class="nav nav-pills center-pills">
-    <li class="hvr-grow interactive {{vm.checkActive(1)}}"><a ng-click="vm.setTab(1)" class="nav-option">about</a></li>
-    <li class="hvr-grow interactive {{vm.checkActive(2)}}"><a ng-click="vm.setTab(2)" class="nav-option">photography</a></li>
-    <li class="hvr-grow interactive {{vm.checkActive(3)}}"><a ng-click="vm.setTab(3)" class="nav-option">connect</a></li>
-    <li class="hvr-grow interactive {{vm.checkActive(4)}}"><a ng-click="vm.setTab(4)" class="nav-option">resume</a></li>
-</ul>
-</div>
-</div>
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand"><img src="images/romaks_logo.png" ng-click="vm.setTab(0)" style="margin-bottom: 15px; padding-bottom: 5px;" class="displayed hvr-grow interactive" height="150"></a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="hvr-grow interactive {{vm.checkActive(1)}}"><a ng-click="vm.setTab(1)" class="nav-option">about</a></li>
+            <li class="hvr-grow interactive {{vm.checkActive(2)}}"><a ng-click="vm.setTab(2)" class="nav-option">photography</a></li>
+            <li class="hvr-grow interactive {{vm.checkActive(3)}}"><a ng-click="vm.setTab(3)" class="nav-option">connect</a></li>
+            <li class="hvr-grow interactive {{vm.checkActive(4)}}"><a ng-click="vm.setTab(4)" class="nav-option">resume</a></li>
+        </ul>
+    </div>
+</nav>
 
 <div class="row">   
     <!-- Need to make an album view directive -->
