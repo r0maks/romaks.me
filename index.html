@@ -10,7 +10,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/angular.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/angular-flickr-api-factory.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -33,6 +32,18 @@
     <li class="hvr-grow interactive {{vm.checkActive(4)}}"><a ng-click="vm.setTab(4)" class="nav-option">resume</a></li>
 </ul>
 </div>
+</div>
+
+<div class="row">   
+    <!--<div class="col-md-4" ng-repeat="photo in vm.photos">
+        <img class="list-image" ng-if="photo.url_z" ng-src="{{photo.url_z}}" alt="Description" />
+    </div>-->
+
+<div class="col-lg-12">
+    <img id="currentImage" class="displayed" ng-if="vm.currentImage.url_l" ng-src="{{vm.currentImage.url_l}}" alt="Description" />
+    <button ng-click="vm.changeImage(1)">    </button>
+</div>
+
 </div>
 
 </body>
