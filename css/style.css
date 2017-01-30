@@ -1,15 +1,13 @@
 
 body {
     color: #ecf0f1;
-}
-
-.container {
-    margin-left:0px;
+    background-color: #34495e;
 }
 
 .jumbotron {
     background-color: transparent;
     padding-left: 15px !important;
+    padding-top: 0px;
 }
 
 .jumbotron h1 {
@@ -28,6 +26,17 @@ body {
     transition-property: transform;
 }
 
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-pills {
+    display: flex;
+    justify-content: center;
+}
+
 .hvr-grow:hover,
 .hvr-grow:focus,
 .hvr-grow:active {
@@ -42,7 +51,7 @@ body {
     font-size: 35px;
     font-weight: bold;
     text-decoration:none;
-    color: #34495e; 
+    color: #ecf0f1;
     padding-top: 0px !important;
 }
 
@@ -53,7 +62,7 @@ body {
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-    color: #ecf0f1;
+    color: #e74c3c;
     background-color: transparent; 
     transform: scale(1.05);
 }
