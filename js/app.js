@@ -21,11 +21,8 @@ app.controller('NavController', ['$http', function ($http) {
 
     // pass in -1 or +1
     function changeImage(direction){
-
         vm.currentImageIndex = vm.currentImageIndex + direction;
         vm.currentImage = vm.photos[vm.currentImageIndex];
-
-        document.getElementById('currentImage').src=vm.currentImage.url_l;
     }
 
     function setTab(tabVal) {
@@ -34,7 +31,6 @@ app.controller('NavController', ['$http', function ($http) {
 
     //TODO Make a showcase album set
     function getShowcaseImages() {
-
         var showCaseAlbumId = '72157672995329216';
         return getAlbumImages(showCaseAlbumId);
     }
