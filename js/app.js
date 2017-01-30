@@ -3,7 +3,6 @@ app.controller('NavController', ['$http', function ($http) {
     var vm = this;
 
     vm.photos = [];
-    
     // start on 0 index 
     vm.currentImageIndex = 0;
     // functions 
