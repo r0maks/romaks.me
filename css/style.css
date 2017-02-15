@@ -53,8 +53,8 @@ img.logo{
     justify-content: center;
 }
 
-.hvr-grow:hover,
-.hvr-grow:focus {
+.hvr-grow.inactive:hover,
+.hvr-grow.inactive:focus {
     transform: scale(1.05);
 }
 
@@ -82,6 +82,16 @@ img.logo{
 
 .navbar-default .navbar-nav > li > a {
     color: #e7e7e7;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
 }
 
 /* focus effect*/

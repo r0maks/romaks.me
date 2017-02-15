@@ -15,7 +15,7 @@ app.controller('NavController', ['$http', function ($http) {
         if (tabVal === vm.currentTab) {
             return 'active';
         }
-        return null;
+        return 'inactive';
     }
 
     // pass in -1 or +1
