@@ -47,7 +47,7 @@ app.controller('NavController', ['$http', function ($http) {
     activate();
 
     function activate() {
-        vm.currentTab = null;
+        vm.currentTab = 1;
         //getShowcaseImages();
     }
 

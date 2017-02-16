@@ -21,7 +21,7 @@
 
 
 <nav class="navbar navbar-default">
-    <div class="navbar-header">
+    <div class="navbar-header" style="padding-top: 7px;">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -33,10 +33,10 @@
 
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li class="hvr-grow interactive {{vm.checkActive(1)}}"><a ng-click="vm.setTab(1)" class="nav-option">about</a></li>
-            <li class="hvr-grow interactive {{vm.checkActive(2)}}"><a ng-click="vm.setTab(2)" class="nav-option">photography</a></li>
-            <li class="hvr-grow interactive {{vm.checkActive(3)}}"><a ng-click="vm.setTab(3)" class="nav-option">connect</a></li>
-            <li class="hvr-grow interactive {{vm.checkActive(4)}}"><a ng-click="vm.setTab(4)" class="nav-option">resume</a></li>
+            <li class="hvr-grow {{vm.checkActive(1)}}"><a ng-click="vm.setTab(1)" class="nav-option">about</a></li>
+            <li class="hvr-grow {{vm.checkActive(2)}}"><a ng-click="vm.setTab(2)" class="nav-option">photography</a></li>
+            <li class="hvr-grow {{vm.checkActive(3)}}"><a ng-click="vm.setTab(3)" class="nav-option">connect</a></li>
+            <li class="hvr-grow {{vm.checkActive(4)}}"><a ng-click="vm.setTab(4)" class="nav-option">resume</a></li>
         </ul>
     </div>
 </nav>
