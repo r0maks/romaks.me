@@ -3,7 +3,6 @@ app.controller('NavController', ['$http', function ($http) {
     var vm = this;
 
     vm.photos = [];
-    
     // start on 0 index 
     vm.currentImageIndex = 0;
     // functions 
@@ -16,7 +15,7 @@ app.controller('NavController', ['$http', function ($http) {
         if (tabVal === vm.currentTab) {
             return 'active';
         }
-        return null;
+        return 'inactive';
     }
 
     // pass in -1 or +1
@@ -48,7 +47,7 @@ app.controller('NavController', ['$http', function ($http) {
     activate();
 
     function activate() {
-        vm.currentTab = null;
+        vm.currentTab = 1;
         //getShowcaseImages();
     }
 
