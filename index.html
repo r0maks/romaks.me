@@ -11,8 +11,14 @@
     <script src="js/angular.js"></script>
     <script src="js/app.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">-->
+
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <meta name="description" content="My personal site. Connect with me!">
 </head>
@@ -31,7 +37,7 @@
         <a class="navbar-brand"><img src="images/romaks_logo.png" ng-click="vm.setTab(1)" style="margin-bottom: 15px; padding-bottom: 5px;" class="displayed hvr-grow interactive logo" height="100"></a>
     </div>
 
-    <div class="navbar-collapse collapse">
+    <!--<div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
             <li class="hvr-grow {{vm.checkActive(1)}}"><a ng-click="vm.setTab(1)" class="nav-option">about</a></li>
             <li class="hvr-grow {{vm.checkActive(2)}}"><a ng-click="vm.setTab(2)" class="nav-option">portraits</a></li>
@@ -39,7 +45,46 @@
             <li class="hvr-grow {{vm.checkActive(4)}}"><a ng-click="vm.setTab(4)" class="nav-option">prints</a></li>
             <li class="hvr-grow {{vm.checkActive(5)}}"><a ng-click="vm.setTab(5)" class="nav-option">resume</a></li>
         </ul>
-    </div>
+    </div>-->
+    				<div class="tabs tabs-style-shape">
+					<nav>
+						<ul>
+							<li>
+								<a>
+									<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+									<span>Home</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+									<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+									<span>Design</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+									<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+									<span>Work</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+									<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+									<span>Portfolio</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+									<span>Contact</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div><!-- /tabs -->
 </nav>
 
 <div class="row">
