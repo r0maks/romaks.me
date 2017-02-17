@@ -15,17 +15,7 @@
 
 body {
     color: #ecf0f1;
-    background-color: #e7e7e7;
-}
-
-.jumbotron {
-    background-color: transparent;
-    padding-left: 15px !important;
-    padding-top: 0px;
-}
-
-.jumbotron h1 {
-    margin-top: 0px;
+    background-color: #35495f;
 }
 
 /* Grow */
@@ -67,15 +57,9 @@ img.logo{
     background-color: #35495f;
 }
 
-.center-pills {
-    display: flex;
-    justify-content: center;
-}
-
 .hvr-grow.inactive:hover,
 .hvr-grow.inactive:focus {
-    transform: scale(1.05);
-    cursor:pointer;
+
 }
 
 .hvr-grow:active {
@@ -105,7 +89,7 @@ img.logo{
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active {
     color: #e7e7e7;
     background-color: #dc716c;
-    padding-bottom: 7px;
+    transition: color 0.3s;
 }
 
 /*
