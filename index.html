@@ -13,7 +13,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">-->
-
+  		<script src="js/modernizr.custom.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
@@ -24,29 +24,14 @@
 </head>
 
 <body>
-
-
-<nav class="navbar navbar-default" style="margin-bottom: 0px;">
-    <div class="navbar-header" style="padding-top: 7px;">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand"><img src="images/romaks_logo.png" ng-click="vm.setTab(1)" style="margin-bottom: 15px; padding-bottom: 5px;" class="displayed hvr-grow interactive logo" height="100"></a>
-    </div>
-
-    <!--<div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <li class="hvr-grow {{vm.checkActive(1)}}"><a ng-click="vm.setTab(1)" class="nav-option">about</a></li>
-            <li class="hvr-grow {{vm.checkActive(2)}}"><a ng-click="vm.setTab(2)" class="nav-option">portraits</a></li>
-            <li class="hvr-grow {{vm.checkActive(3)}}"><a ng-click="vm.setTab(3)" class="nav-option">lightwork</a></li>
-            <li class="hvr-grow {{vm.checkActive(4)}}"><a ng-click="vm.setTab(4)" class="nav-option">prints</a></li>
-            <li class="hvr-grow {{vm.checkActive(5)}}"><a ng-click="vm.setTab(5)" class="nav-option">resume</a></li>
-        </ul>
-    </div>-->
-    				<div class="tabs tabs-style-shape">
+		<svg class="hidden">
+			<defs>
+				<path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
+			</defs>
+		</svg>
+<div class="container">  
+    <section>
+        	<div class="tabs tabs-style-shape">
 					<nav>
 						<ul>
 							<li>
@@ -85,7 +70,8 @@
 						</ul>
 					</nav>
 				</div><!-- /tabs -->
-</nav>
+    </section>  
+</div>
 
 <div class="row">
     <div class="col-lg-12">
