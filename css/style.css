@@ -108,6 +108,12 @@ img.logo{
     padding-bottom: 7px;
 }
 
+.tab-current
+{
+    background-color: #dc716c !important;
+
+}
+
 /*
 orange: #dc716c;
 blue: #35495f
