@@ -12,6 +12,9 @@
     font-style: normal;
 
 }
+.a {
+    text-decoration: none;
+}
 
 body {
     color: #ecf0f1;
