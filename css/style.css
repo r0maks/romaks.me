@@ -13,9 +13,15 @@
 
 }
 
+html{
+    background-color: #dc716c;
+}
+
 body {
     color: #ecf0f1;
-    background-color: #dc716c;
+    margin:0px auto;
+    width: 1366px; 
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 /* Grow */
@@ -38,15 +44,14 @@ img.logo{
     padding-top: 0;
 }
 
-.navbar-brand{
-    margin-right:50px;
-    margin-left:50px;
+.navbar {
+    border-radius: 0px;
+    position: fixed !important;
 }
 
 .navbar-default{
     background-color: #35495f;
     border-color: transparent;
-      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);box-shadow: 1px 1px 15px black;
 }
 
 .nav-option.inactive:hover,
@@ -90,7 +95,7 @@ orange: #dc716c;
 blue: #35495f
 */
 .main-container {
-    background-color: #dc716c;
+    background-color: #ecf0f1;
     color: #ecf0f1;
     font-family: geosans;
     width: 100%;
