@@ -1,5 +1,5 @@
 var app = angular.module('mySite', []);
-app.controller('NavController', ['$http', function ($http) {
+app.controller('NavController', ['$http', '$window', function ($http, $window) {
     var vm = this;
 
     vm.photos = [];
@@ -25,7 +25,12 @@ app.controller('NavController', ['$http', function ($http) {
     }
 
     function setTab(tabVal) {
-        vm.currentTab = tabVal;
+
+        if(tabVal !== vm.currentTab){
+            vm.currentTab = tabVal;
+            // move to the top of the page
+            $window.scrollTo(0, 0);
+        }
     }
 
     //TODO Make a showcase album set
