@@ -28,11 +28,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand"><img src="images/romaks_logo.png" ng-click="vm.setTab(1)" style="margin-bottom: 15px; padding-bottom: 5px;" class="displayed hvr-grow interactive logo" height="75"></a>
+        <!--<a class="navbar-brand"><img src="images/romaks_logo.png" ng-click="vm.setTab(1)" style="margin-bottom: 15px; padding-bottom: 5px;" class="displayed hvr-grow interactive logo" height="75"></a>-->
     </div>
 
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
+            <li><a class="navbar-brand"><img src="images/romaks_logo.png" ng-click="vm.setTab(1)" style="padding-bottom: 5px;" class="displayed hvr-grow interactive logo" height="75"></a></li>
             <li><a ng-click="vm.setTab(1)" class="nav-option {{vm.checkActive(1)}}" >about</a></li>
             <li><a ng-click="vm.setTab(2)" class="nav-option {{vm.checkActive(2)}}">portraits</a></li>
             <li><a ng-click="vm.setTab(3)" class="nav-option {{vm.checkActive(3)}}">lightwork</a></li>

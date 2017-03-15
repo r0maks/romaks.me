@@ -15,20 +15,19 @@
 
 html{
     
-
 }
 
 body {
     color: #ecf0f1;
     margin:0px auto;
     width: 1366px; 
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-image: url("pattern.png");
 }
 
 /* Grow */
 
 img.displayed {
-    display: block;
+    display: inline;
     margin-left: auto;
     margin-right: auto;
 }
@@ -51,7 +50,7 @@ img.logo{
 }
 
 .navbar-default{
-    background-color: #35495f;
+    background-color: transparent;
     border-color: transparent;
 }
 
@@ -110,9 +109,9 @@ blue: #35495f
     font-family: geosans;
     height: 1000px;
     width: 100%;
-    opacity: .42;
-    background-image: url("pattern.png");
-    background-color: #34495e;
+    background: #ecf0f1;
+    opacity: .15;
+    margin-top: 90px;
 }
 
 .page-content {
