@@ -38,7 +38,7 @@ img.logo{
 
 .navbar-brand,
 .navbar-nav li a {
-    line-height: 100px;
+    line-height: 65px;
     max-height: 100px;
     height: 70px;
     padding-top: 0;
@@ -111,7 +111,7 @@ blue: #35495f
     width: 100%;
     background: #ecf0f1;
     opacity: .15;
-    margin-top: 90px;
+    margin-top: 60px;
 }
 
 .page-content {
