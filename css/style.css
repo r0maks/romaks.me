@@ -18,10 +18,23 @@ html{
 }
 
 body {
-    color: #ecf0f1;
+    color: #35495f;
     margin:0px auto;
     width: 960px; 
     background-image: url("pattern.png");
+}
+
+*::selection {
+  background: #dc716c;
+  color: #ffffff;
+}
+*::-moz-selection {
+  background: #dc716c;
+  color: #ffffff;
+}
+*::-webkit-selection {
+  background: #dc716c;
+  color: #ffffff;
 }
 
 /* Grow */
@@ -38,7 +51,7 @@ img.logo{
 
 .navbar-brand,
 .navbar-nav li a {
-    line-height: 65px;
+    line-height: 70px;
     max-height: 100px;
     height: 70px;
     padding-top: 0;
@@ -107,11 +120,31 @@ blue: #35495f
 .main-container {
 
     font-family: geosans;
-    height: 1000px;
+    font-size: 28px;
+    line-height: 32px;
+    height: 100%;
     width: 100%;
     background: #ecf0f1;
-    opacity: .15;
     margin-top: 60px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.round {
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  -webkit-border-radius: 2px; 
+
+  /* Firefox 1-3.6 */
+  -moz-border-radius: 2px; 
+  
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: 2px; 
+}
+
+.centered-image {
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .page-content {

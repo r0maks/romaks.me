@@ -42,8 +42,31 @@
     </div>
 </nav>
 
-<div class="container main-container">
+<div ng-if="vm.currentTab === 1" class="container main-container round">
     
+    <div class="col-lg-6">
+        <img src="images/pic.jpg" class="img-circle centered-image" height="375" alt="">
+
+    </div>
+    <div class="col-lg-6">
+        
+        <p>
+I am a software engineer and photographer living in Bonita Springs, FL. <br><br>
+
+While I enjoy writing code for a living, my passion lies in photography and portraiture - my LightWork. <br><br>
+In my free moments, I explore and document SWFL with a unique perspective, highlighting the area in a manner that I don't believe many see.  
+
+        </p>
+
+    </div>
+
+</div>
+
+    <!--<div class="footer"><p>All content © 2017, Román Maksimov</p></div>-->
+</body>
+</html>
+
+
     <!-- Need to make an album view directive -->
     <!--<div class="col-md-4" ng-repeat="photo in vm.photos">
         <img class="list-image" ng-if="photo.url_z" ng-src="{{photo.url_z}}" alt="Description" />
@@ -54,9 +77,3 @@
     <img id="currentImage" class="displayed" ng-if="vm.currentImage.url_l" ng-src="{{vm.currentImage.url_l}}" alt="Description" />
     <button ng-click="vm.changeImage(1)">    </button>
 </div>-->
-
-</div>
-
-    <!--<div class="footer"><p>All content © 2017, Román Maksimov</p></div>-->
-</body>
-</html>
