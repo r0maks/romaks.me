@@ -13,13 +13,29 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     vm.getPortraitImages = getPortraitImages;
     vm.changeImage = changeImage;
     vm.setActiveImage = setActiveImage;
-
+    vm.checkDisable = checkDisable;
 
     function checkActive(tabVal) {
         if (tabVal === vm.currentTab) {
             return 'active';
         }
         return 'inactive';
+    }
+
+    // pass in +1 or -1
+    function checkDisable(direction){
+
+        if(!vm.photos || !vm.photos.length || vm.photos.lenght < 1){
+            return true;
+        }
+
+        var resultIndex = vm.currentImageIndex + direction;
+        var totalLength = vm.photos.length;
+
+        if(resultIndex < 0 || resultIndex > (totalLength-1)){
+            return true;
+        }
+        return false;
     }
 
     // pass in -1 or +1
