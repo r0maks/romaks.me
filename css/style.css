@@ -39,11 +39,7 @@ body {
 
 /* Grow */
 
-img.displayed {
-    display: inline;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 img.logo{
     max-height: 70px;    
@@ -101,8 +97,6 @@ img.logo{
 .navbar-nav{
     margin-top: -5px;
 }
-
-
 
 .navbar .navbar-nav {
   display: inline-block;
@@ -273,5 +267,23 @@ blue: #35495f
 .modal-dialog {
     width: 960px !important;
     margin: 30px auto;
+}
+
+.modal-content{
+    padding: 5px;
+    padding-bottom: 10px;
+    background: #ecf0f1;
+}
+
+img.resize{
+    width:auto; /* you can use % */
+    height: 600px;
+}
+
+.btn-primary {
+    border-color: #dc716c;
+    background-color: #dc716c;
+    color: #ecf0f1;
+    font-family: cocogoose;
 }
 

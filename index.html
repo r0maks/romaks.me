@@ -65,7 +65,7 @@
     <div class="col-lg-12 no-shoulder">
         <section id="photos">
             <!--<button type="button" class="btn btn-info btn-lg" >Open Modal</button>-->
-            <img ng-repeat="photo in vm.photos track by $index" ng-click="vm.setActiveImage($index)" data-toggle="modal" data-target="#pleaseWaitDialog"
+            <img ng-repeat="photo in vm.photos track by $index" style="margin-bottom: 4px;" ng-click="vm.setActiveImage($index)" data-toggle="modal" data-target="#pleaseWaitDialog"
                 ng-src="{{photo.url_z}}">
         </section>
     </div>
@@ -95,12 +95,12 @@
 
         <!-- Modal content-->
         <div class="modal-content">
-            <img id="currentImage" class="displayed" ng-if="vm.currentImage.url_l" width="100%" ng-src="{{vm.currentImage.url_l}}"/>
+            <img id="currentImage" style="margin-bottom: 5px;" class="displayed resize centered-image" ng-if="vm.currentImage.url_l"  ng-src="{{vm.currentImage.url_l}}"/>
             <div class="col-sm-12">
                 <div class="text-center">
                     <div class="btn-group" role="group">
-                        <button type="button" ng-click="vm.changeImage(-1)" class="btn btn-secondary">previous</button>
-                        <button type="button" ng-click="vm.changeImage(1)" class="btn btn-secondary">next</button>
+                        <button type="button" ng-click="vm.changeImage(-1)" class="btn btn-primary"><</button>
+                        <button type="button" ng-click="vm.changeImage(1)" class="btn btn-primary">></button>
                     </div>
                 </div>
             </div>
