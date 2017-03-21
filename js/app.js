@@ -70,12 +70,13 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     }
 
     function getAlbumImages(photoSetId, flag) {
+        vm.isLoading = true;
         return $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=a204dbf28ba325b9f717d739309ac663&photoset_id=' + photoSetId + '&extras=url_q%2C+url_z%2Curl_l%2Ctags&format=json&nojsoncallback=1')
             .success(function (data) {
                 if (data && data.photoset && data.photoset.photo.length) {
                     vm.photos = data.photoset.photo;
                     vm.currentImage = vm.photos[0];
-
+                    vm.isLoading = false;
                     if (flag != null && flag == false) {
                         flag = true
                     }

@@ -286,3 +286,12 @@ img.resize{
     font-family: cocogoose;
 }
 
+.img-hover {
+	opacity: 1;
+    transition: ease-in; 
+
+}
+.img-hover:hover {
+	opacity: .5;
+}
+

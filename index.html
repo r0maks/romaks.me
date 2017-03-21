@@ -65,7 +65,7 @@
     <div class="col-lg-12 no-shoulder">
         <section id="photos">
             <!--<button type="button" class="btn btn-info btn-lg" >Open Modal</button>-->
-            <img ng-repeat="photo in vm.photos track by $index" style="margin-bottom: 4px;" ng-click="vm.setActiveImage($index)" data-toggle="modal" data-target="#pleaseWaitDialog"
+            <img class="img-hover" ng-repeat="photo in vm.photos track by $index" style="margin-bottom: 4px;" ng-click="vm.setActiveImage($index)" data-toggle="modal" data-target="#pleaseWaitDialog"
                 ng-src="{{photo.url_z}}">
         </section>
     </div>
