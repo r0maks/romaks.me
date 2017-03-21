@@ -131,8 +131,8 @@ blue: #35495f
     width: 100%;
     background: #ecf0f1;
     margin-top: 65px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .header-text{
@@ -198,4 +198,9 @@ blue: #35495f
   margin: 20px;
   color: #ecf0f1;
   text-align: center;
+}
+
+.no-shoulder{
+    padding-left: 0px;
+    padding-right: 0px;
 }
