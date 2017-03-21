@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="mySite" ng-controller="NavController as vm" ng-cloak>
+<html ng-app="mySite" scroll ng-controller="NavController as vm" ng-cloak>
 
 <head>
     <title>Román Maksimov - Photographer, Software Engineer</title>
@@ -31,7 +31,7 @@
     </div>
 
     <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav ng-class="{min:boolChangeClass}"">
             <!--<li><a class="navbar-brand"><img src="images/romaks_logo.png" ng-click="vm.setTab(1)" style="padding-bottom: 5px;" class="displayed hvr-grow interactive logo" height="75"></a></li>-->
             <li><a ng-click="vm.setTab(1)" class="nav-option {{vm.checkActive(1)}}" >about</a></li>
             <li><a ng-click="vm.setTab(2)" class="nav-option {{vm.checkActive(2)}}">portraits</a></li>

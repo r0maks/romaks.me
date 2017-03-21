@@ -1,5 +1,5 @@
 var app = angular.module('mySite', []);
-app.controller('NavController', ['$http', '$window', function ($http, $window) {
+app.controller('NavController', ['$http', '$scope', '$window', function ($http, $scope, $window) {
     var vm = this;
 
     vm.photos = [];
@@ -13,6 +13,7 @@ app.controller('NavController', ['$http', '$window', function ($http, $window) {
     vm.getPortraitImages = getPortraitImages;
     vm.changeImage = changeImage;
 
+
     function checkActive(tabVal) {
         if (tabVal === vm.currentTab) {
             return 'active';
@@ -21,16 +22,16 @@ app.controller('NavController', ['$http', '$window', function ($http, $window) {
     }
 
     // pass in -1 or +1
-    function changeImage(direction){
+    function changeImage(direction) {
         vm.currentImageIndex = vm.currentImageIndex + direction;
         vm.currentImage = vm.photos[vm.currentImageIndex];
     }
 
     function setTab(tabVal) {
 
-        if(tabVal !== vm.currentTab){
+        if (tabVal !== vm.currentTab) {
 
-            if(tabVal === 2 && vm.portraitImagesLoaded === false){
+            if (tabVal === 2 && vm.portraitImagesLoaded === false) {
                 getPortraitImages(vm.portraitImagesLoaded)
             }
 
@@ -46,18 +47,18 @@ app.controller('NavController', ['$http', '$window', function ($http, $window) {
         return getAlbumImages(showCaseAlbumId, vm.portraitImagesLoaded);
     }
 
-    function getAlbumImages(photoSetId, flag){
-      return $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=a204dbf28ba325b9f717d739309ac663&photoset_id='+photoSetId+'&extras=url_q%2C+url_z%2Curl_l%2Ctags&format=json&nojsoncallback=1')
-      .success(function (data) {
-        if(data && data.photoset && data.photoset.photo.length){
-            vm.photos = data.photoset.photo;     
-            vm.currentImage = vm.photos[0];     
+    function getAlbumImages(photoSetId, flag) {
+        return $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=a204dbf28ba325b9f717d739309ac663&photoset_id=' + photoSetId + '&extras=url_q%2C+url_z%2Curl_l%2Ctags&format=json&nojsoncallback=1')
+            .success(function (data) {
+                if (data && data.photoset && data.photoset.photo.length) {
+                    vm.photos = data.photoset.photo;
+                    vm.currentImage = vm.photos[0];
 
-            if(flag != null && flag == false){
-                flag = true
-            }
-        }     
-    });
+                    if (flag != null && flag == false) {
+                        flag = true
+                    }
+                }
+            });
     }
 
     activate();
