@@ -159,6 +159,7 @@ blue: #35495f
     background: #dc716c;
     color: #ecf0f1;
     padding: 2px;
+    padding-top: 5px;
     text-align: left;
 }
 
@@ -269,9 +270,8 @@ blue: #35495f
   }
 }
 
-.hover-img {
-	
+.modal-dialog {
+    width: 960px !important;
+    margin: 30px auto;
 }
-.hover-img:hover{
-	
-}
+

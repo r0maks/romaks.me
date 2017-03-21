@@ -12,6 +12,7 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     vm.setTab = setTab;
     vm.getPortraitImages = getPortraitImages;
     vm.changeImage = changeImage;
+    vm.setActiveImage = setActiveImage;
 
 
     function checkActive(tabVal) {
@@ -24,6 +25,11 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     // pass in -1 or +1
     function changeImage(direction) {
         vm.currentImageIndex = vm.currentImageIndex + direction;
+        vm.currentImage = vm.photos[vm.currentImageIndex];
+    }
+
+    function setActiveImage(index){
+        vm.currentImageIndex = index;
         vm.currentImage = vm.photos[vm.currentImageIndex];
     }
 
@@ -70,8 +76,8 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
 
 
 $(function () {
-  $(document).scroll(function () {
-    var $nav = $(".navbar-fixed-top");
-    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-  });
+    $(document).scroll(function () {
+        var $nav = $(".navbar-fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
 });
