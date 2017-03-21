@@ -280,8 +280,8 @@ img.resize{
 }
 
 .btn-primary {
-    border-color: #dc716c;
-    background-color: #dc716c;
+    /*border-color: #dc716c;
+    background-color: #dc716c;*/
     color: #ecf0f1;
     font-family: cocogoose;
 }
