@@ -67,3 +67,11 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
         vm.currentTab = 1;
     }
 }]);
+
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar-fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
