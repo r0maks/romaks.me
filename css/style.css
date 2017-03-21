@@ -13,8 +13,13 @@
 
 }
 
-html{
-    
+@font-face {
+    font-family: 'cocogoose';
+    src: url('cocogoose.woff2') format('woff2'),
+         url('cocogoose.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
 }
 
 body {
@@ -54,7 +59,7 @@ img.logo{
     line-height: 70px;
     max-height: 100px;
     height: 70px;
-    padding-top: 0;
+    padding-top: 5px;
 }
 
 .navbar {
@@ -83,9 +88,9 @@ img.logo{
 }
 
 .nav-option {
-    font-family: geosans;
-    font-size: 40px;
-    font-weight: bold;
+    font-family: cocogoose;
+    font-size: 30px;
+    /*font-weight: bold;*/
     text-decoration:none;
     color: #ecf0f1 !important;
     margin-right: 7px;
@@ -125,9 +130,36 @@ blue: #35495f
     height: 100%;
     width: 100%;
     background: #ecf0f1;
-    margin-top: 60px;
+    margin-top: 65px;
     padding-top: 70px;
     padding-bottom: 70px;
+}
+
+.header-text{
+    font-family: cocogoose;
+    margin-top: 0px;
+    font-size: 36px;
+    background: #dc716c;
+    color: #ecf0f1;
+    padding: 2px;
+    text-align: left;
+}
+
+.geosans{
+    font-family: geosans;
+}
+
+.cocogoose{
+    font-family: cocogoose;
+}
+
+.important-text{
+    font-size: 30px;
+    text-align: center;
+    background: #dc716c;
+    color: #ecf0f1;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .round {
@@ -142,7 +174,7 @@ blue: #35495f
 }
 
 .centered-image {
-     display: block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
@@ -162,7 +194,8 @@ blue: #35495f
 
 
 .footer {
+    font-family: geosans;
   margin: 20px;
-  color: #35495f;
+  color: #ecf0f1;
   text-align: center;
 }
