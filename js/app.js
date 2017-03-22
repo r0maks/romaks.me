@@ -24,16 +24,16 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     }
 
     // pass in +1 or -1
-    function checkDisable(direction){
+    function checkDisable(direction) {
 
-        if(!vm.photos || !vm.photos.length || vm.photos.lenght < 1){
+        if (!vm.photos || !vm.photos.length || vm.photos.lenght < 1) {
             return true;
         }
 
         var resultIndex = vm.currentImageIndex + direction;
         var totalLength = vm.photos.length;
 
-        if(resultIndex < 0 || resultIndex > (totalLength-1)){
+        if (resultIndex < 0 || resultIndex > (totalLength - 1)) {
             return true;
         }
         return false;
@@ -45,7 +45,7 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
         vm.currentImage = vm.photos[vm.currentImageIndex];
     }
 
-    function setActiveImage(index){
+    function setActiveImage(index) {
         vm.currentImageIndex = index;
         vm.currentImage = vm.photos[vm.currentImageIndex];
     }
@@ -55,7 +55,7 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
         if (tabVal !== vm.currentTab) {
 
             if (tabVal === 2 && vm.portraitImagesLoaded === false) {
-                getPortraitImages(vm.portraitImagesLoaded)
+                getPortraitImages()
             }
 
             vm.currentTab = tabVal;
@@ -64,29 +64,41 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
         }
     }
 
-    function goLink(link){
+    function goLink(link) {
         $window.open(link, "_blank")
     }
 
     //TODO Make a showcase album set
     function getPortraitImages() {
         var showCaseAlbumId = '72157665034972542';
-        return getAlbumImages(showCaseAlbumId, vm.portraitImagesLoaded);
+        return getAlbumImages(showCaseAlbumId);
     }
 
-    function getAlbumImages(photoSetId, flag) {
+    function getAlbumImages(photoSetId) {
         vm.isLoading = true;
         return $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=a204dbf28ba325b9f717d739309ac663&photoset_id=' + photoSetId + '&extras=url_q%2C+url_z%2Curl_l%2Ctags&format=json&nojsoncallback=1')
             .success(function (data) {
                 if (data && data.photoset && data.photoset.photo.length) {
                     vm.photos = data.photoset.photo;
+                    shuffleSet(vm.photos);
                     vm.currentImage = vm.photos[0];
                     vm.isLoading = false;
-                    if (flag != null && flag == false) {
-                        flag = true
+                    if (vm.portraitImagesLoaded == null || vm.portraitImagesLoaded == false) {
+                        vm.portraitImagesLoaded = true
                     }
                 }
             });
+    }
+
+    // shuffles photoset so they display in a different order every time
+    function shuffleSet(a) {
+        var j, x, i;
+        for (i = a.length; i; i--) {
+            j = Math.floor(Math.random() * i);
+            x = a[i - 1];
+            a[i - 1] = a[j];
+            a[j] = x;
+        }
     }
 
     activate();
