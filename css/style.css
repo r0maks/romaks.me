@@ -279,11 +279,16 @@ img.resize{
     height: 600px;
 }
 
-.btn-primary {
+.btn-default {
     /*border-color: #dc716c;
     background-color: #dc716c;*/
-    color: #ecf0f1;
     font-family: cocogoose;
+}
+
+.arrow{
+    font-size: 40px;
+    width: 80px;
+    background: transparent;
 }
 
 .post-content {

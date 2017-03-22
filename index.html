@@ -101,9 +101,9 @@
             <img id="currentImage" style="margin-bottom: 5px;" class="displayed resize centered-image" ng-if="vm.currentImage.url_l" ng-src="{{vm.currentImage.url_l}}"/>
 <div class="text-center">
     <div class="btn-group" role="group">
-        <button type="button" ng-disabled="vm.checkDisable(-1)" ng-click="vm.changeImage(-1)" class="btn btn-primary"><</button>
-        <button type="button" ng-disabled="vm.checkDisable(1)" ng-click="vm.changeImage(1)" class="btn btn-primary">></button>
-        <button type="button" class="btn btn-default text-right" data-dismiss="modal">Close</button>
+        <button type="button" ng-disabled="vm.checkDisable(-1)" ng-click="vm.changeImage(-1)" class="btn btn-default arrow"><</button>
+        <button type="button" ng-disabled="vm.checkDisable(1)" ng-click="vm.changeImage(1)" class="btn btn-default arrow">></button>
+        <!--<button type="button" class="btn btn-default text-right" data-dismiss="modal">Close</button>-->
     </div>
 </div>
 </div>
