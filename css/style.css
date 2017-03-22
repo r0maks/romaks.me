@@ -286,6 +286,27 @@ img.resize{
     font-family: cocogoose;
 }
 
+.list-group-item{
+    background-color: #ecf0f1;
+    font-family: geosans;
+    font-size: 35px;
+    cursor: pointer;
+    height: 100%; overflow: auto;
+}
+.list-group-item:hover{
+    transition: ease-in-out 0.2s;
+    color: #dc716c;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.clickable:hover{
+    transition: ease-in-out 0.2s;
+    transform: scale(1.08);
+}
+
 .img-hover {
 	opacity: 1;
     transition: ease-in; 

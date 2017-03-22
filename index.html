@@ -11,6 +11,7 @@
     <script src="js/angular.js"></script>
     <script src="js/app.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/489ee0d03b.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
@@ -39,7 +40,7 @@
         <!--<li><a ng-click="vm.setTab(3)" class="nav-option {{vm.checkActive(3)}}">lightwork</a></li>-->
         <!--<li><a ng-click="vm.setTab(4)" class="nav-option {{vm.checkActive(4)}}">prints</a></li>-->
         <li><a ng-click="vm.setTab(6)" class="nav-option {{vm.checkActive(6)}}">contact</a></li>
-        <li><a ng-click="vm.setTab(5)" class="nav-option {{vm.checkActive(5)}}">resume</a></li>
+        <!--<li><a ng-click="vm.setTab(5)" class="nav-option {{vm.checkActive(5)}}">resume</a></li>-->
     </ul>
 </div>
 </nav>
@@ -47,7 +48,7 @@
 <div ng-if="vm.currentTab === 1" class="container main-container round">
     <div class="col-lg-6" style="margin-top:10px;">
 <img src="images/pic.jpg" class="img-circle centered-image" height="375" alt="Román Maksimov">
-<h3 class="geosans important-text" style="width:50%">Román Maksimov</h3>
+    <h3 class="geosans important-text clickable" ng-click="vm.setTab(6)" style="width:35%">Contact Me</h3>
 </div>
 <div class="col-lg-6">
     <p>
@@ -65,42 +66,46 @@
     <div class="col-lg-12 no-shoulder">
         <section id="photos">
             <!--<button type="button" class="btn btn-info btn-lg" >Open Modal</button>-->
-            <img class="img-hover" ng-repeat="photo in vm.photos track by $index" style="margin-bottom: 4px;" ng-click="vm.setActiveImage($index)" data-toggle="modal" data-target="#pleaseWaitDialog"
-                ng-src="{{photo.url_z}}">
-        </section>
-    </div>
+            <img class="img-hover" ng-repeat="photo in vm.photos track by $index" style="margin-bottom: 4px;" ng-click="vm.setActiveImage($index)" data-toggle="modal" data-target="#pleaseWaitDialog" ng-src="{{photo.url_z}}">
+</section>
+</div>
 </div>
 <div ng-if="vm.currentTab === 6" class="container main-container round">
 
     <h3 class="header-text">&nbsp; Contact</h3>
 
-    <div class="col-lg-8 no-shoulder">
-        <div class="col-sm-6">
-
-        </div>
-        <div class="col-sm-6">
-
-        </div>
-
+    <div class="col-lg-6 no-shoulder">
+        <img src="https://c1.staticflickr.com/3/2947/33195516380_804cfa63d5_c.jpg" width="100%" height="330px;">
     </div>
-    <div class="col-lg-4 no-shoulder">
-
+    <div class="col-lg-6 no-shoulder">
+        <ul class="list-group">
+            <li class="list-group-item"><i class="fa fa-phone-square" aria-hidden="true"></i> 239 200 6143</li>
+            <li class="list-group-item"><i class="fa fa-envelope-o" aria-hidden="true"></i> rrmaksimov@gmail.com</li>
+            <li class="list-group-item"><i class="fa fa-flickr" aria-hidden="true"></i> rrmaksimov</li>
+            <li class="list-group-item"><i class="fa fa-facebook-square" aria-hidden="true"></i> Román Maksimov</li>
+            <li class="list-group-item"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</li>
+            <li class="list-group-item"><i class="fa fa-paperclip" aria-hidden="true"></i> Resume</li>
+        </ul>
     </div>
 </div>
 
 <div id="pleaseWaitDialog" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
-            <img id="currentImage" style="margin-bottom: 5px;" class="displayed resize centered-image" ng-if="vm.currentImage.url_l"  ng-src="{{vm.currentImage.url_l}}"/>
-                <div class="text-center">
-                    <div class="btn-group" role="group">
-                        <button type="button" ng-disabled="vm.checkDisable(-1)" ng-click="vm.changeImage(-1)" class="btn btn-primary"><</button>
-                        <button type="button" ng-disabled="vm.checkDisable(1)" ng-click="vm.changeImage(1)" class="btn btn-primary">></button>
-                        <button type="button" class="btn btn-default text-right" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-        </div>
+            <img id="currentImage" style="margin-bottom: 5px;" class="displayed resize centered-image" ng-if="vm.currentImage.url_l" ng-src="{{vm.currentImage.url_l}}"/>
+<div class="text-center">
+    <div class="btn-group" role="group">
+        <button type="button" ng-disabled="vm.checkDisable(-1)" ng-click="vm.changeImage(-1)" class="btn btn-primary"><</button>
+        <button type="button" ng-disabled="vm.checkDisable(1)" ng-click="vm.changeImage(1)" class="btn btn-primary">></button>
+        <button type="button" class="btn btn-default text-right" data-dismiss="modal">Close</button>
     </div>
 </div>
+</div>
+</div>
+</div>
 </body>
+
 </html>
+
+<!--resume-->
+<!--<object width="100%;" height="900" data="https://docs.google.com/gview?embedded=true&url=http://romaks.me/RomanMaksimov_resume.pdf"></object>-->
