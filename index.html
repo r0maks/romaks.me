@@ -51,7 +51,7 @@
 <div class="thumbnail">
             <img src="images/pic.jpg" class="img-circle centered-image" height="375" alt="Román Maksimov">
             <div class="caption post-content geosans">
-                <h3 style="color:#ecf0f1;margin-bottom: 25px;font-size: 31px;">Román Maksimov</h3>
+                <h3 style="color:#ecf0f1;margin-bottom: 35px;font-size: 31px;">Román Maksimov</h3>
             </div>
         </div>
     <!--<h3 class="geosans important-text clickable" ng-click="vm.setTab(6)" style="width:35%">Contact Me</h3>-->
@@ -85,12 +85,12 @@
     </div>
     <div class="col-lg-6 no-shoulder">
         <ul class="list-group">
-            <li class="list-group-item"><i class="fa fa-phone-square" aria-hidden="true"></i> 239 200 6143</li>
-            <li class="list-group-item"><i class="fa fa-envelope-o" aria-hidden="true"></i> rrmaksimov@gmail.com</li>
-            <li class="list-group-item"><i class="fa fa-flickr" aria-hidden="true"></i> rrmaksimov</li>
-            <li class="list-group-item"><i class="fa fa-facebook-square" aria-hidden="true"></i> Román Maksimov</li>
-            <li class="list-group-item"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</li>
-            <li class="list-group-item"><i class="fa fa-paperclip" aria-hidden="true"></i> Resume</li>
+            <li ng-click="vm.goLink('tel:12392006143')"class="list-group-item"><i class="fa fa-phone-square" aria-hidden="true"></i> 239 200 6143</li>
+            <li ng-click="vm.goLink('mailto:rrmaksimov@gmail.com')"class="list-group-item"><i class="fa fa-envelope-o" aria-hidden="true"></i> rrmaksimov@gmail.com</li>
+            <li ng-click="vm.goLink('https://www.instagram.com/romaks/')"class="list-group-item"><i class="fa fa-instagram" aria-hidden="true"></i> @romaks</li>
+            <li ng-click="vm.goLink('https://www.facebook.com/romaxe')"class="list-group-item"><i class="fa fa-facebook-square" aria-hidden="true"></i> Román Maksimov</li>
+            <li ng-click="vm.goLink('https://www.linkedin.com/in/romaks/')"class="list-group-item"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</li>
+            <li ng-click="vm.goLink('https://docs.google.com/gview?embedded=true&url=http://romaks.me/RomanMaksimov_resume.pdf')"class="list-group-item"><i class="fa fa-paperclip" aria-hidden="true"></i> Resume</li>
         </ul>
     </div>
 </div>

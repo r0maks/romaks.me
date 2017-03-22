@@ -14,6 +14,7 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     vm.changeImage = changeImage;
     vm.setActiveImage = setActiveImage;
     vm.checkDisable = checkDisable;
+    vm.goLink = goLink;
 
     function checkActive(tabVal) {
         if (tabVal === vm.currentTab) {
@@ -61,6 +62,10 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
             // always move to the top of the page
             $window.scrollTo(0, 0);
         }
+    }
+
+    function goLink(link){
+        $window.open(link, "_blank")
     }
 
     //TODO Make a showcase album set
