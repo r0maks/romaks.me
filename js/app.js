@@ -55,7 +55,7 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
         if (tabVal !== vm.currentTab) {
 
             if (tabVal === 2 && vm.portraitImagesLoaded === false) {
-                getPortraitImages(vm.portraitImagesLoaded)
+                getPortraitImages()
             }
 
             vm.currentTab = tabVal;
@@ -71,10 +71,10 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     //TODO Make a showcase album set
     function getPortraitImages() {
         var showCaseAlbumId = '72157665034972542';
-        return getAlbumImages(showCaseAlbumId, vm.portraitImagesLoaded);
+        return getAlbumImages(showCaseAlbumId);
     }
 
-    function getAlbumImages(photoSetId, flag) {
+    function getAlbumImages(photoSetId) {
         vm.isLoading = true;
         return $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=a204dbf28ba325b9f717d739309ac663&photoset_id=' + photoSetId + '&extras=url_q%2C+url_z%2Curl_l%2Ctags&format=json&nojsoncallback=1')
             .success(function (data) {
@@ -83,8 +83,8 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
                     shuffleSet(vm.photos);
                     vm.currentImage = vm.photos[0];
                     vm.isLoading = false;
-                    if (flag != null && flag == false) {
-                        flag = true
+                    if (vm.portraitImagesLoaded == null || vm.portraitImagesLoaded == false) {
+                        vm.portraitImagesLoaded = true
                     }
                 }
             });
