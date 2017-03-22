@@ -90,6 +90,7 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
             });
     }
 
+    // shuffles photoset so they display in a different order every time
     function shuffleSet(a) {
         var j, x, i;
         for (i = a.length; i; i--) {
