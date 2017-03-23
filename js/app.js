@@ -64,8 +64,13 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
         }
     }
 
-    function goLink(link) {
-        $window.open(link, "_blank")
+    function goLink(link, flag) {
+
+        if(flag){
+            $window.open(link);
+        }else{
+            $window.open(link, "_blank");
+        }
     }
 
     //TODO Make a showcase album set
