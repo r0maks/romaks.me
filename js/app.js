@@ -113,10 +113,15 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     }
 }]);
 
-
 $(function () {
     $(document).scroll(function () {
         var $nav = $(".navbar-fixed-top");
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
+});
+
+$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+    }
 });
