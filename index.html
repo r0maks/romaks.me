@@ -16,13 +16,14 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <meta name="description" content="My personal site. Connect with me!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
 
 <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0px;">
-<div class="navbar-header" style="padding-top: 7px;">
+<div class="navbar-header">
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -39,6 +40,7 @@
         <li><a ng-click="vm.setTab(2)" class="nav-option {{vm.checkActive(2)}}">portraits</a></li>
         <!--<li><a ng-click="vm.setTab(3)" class="nav-option {{vm.checkActive(3)}}">lightwork</a></li>-->
         <!--<li><a ng-click="vm.setTab(4)" class="nav-option {{vm.checkActive(4)}}">prints</a></li>-->
+        <!--<li><a ng-click="vm.setTab(3)" class="nav-option {{vm.checkActive(3)}}">ILMC</a></li>-->
         <li><a ng-click="vm.setTab(6)" class="nav-option {{vm.checkActive(6)}}">contact</a></li>
         <!--<li><a ng-click="vm.setTab(5)" class="nav-option {{vm.checkActive(5)}}">resume</a></li>-->
     </ul>
@@ -49,7 +51,7 @@
     <div class="col-md-6" style="margin-top:10px;">
 
 <div class="thumbnail">
-            <img src="images/pic.jpg" class="img-circle centered-image" height="100%" alt="Román Maksimov">
+            <img src="images/pic.jpg" class="img-circle centered-image" alt="Román Maksimov">
             <div class="caption post-content geosans">
                 <h3 style="color:#ecf0f1;margin-bottom: 35px;font-size: 31px;">Román Maksimov</h3>
             </div>
@@ -60,7 +62,7 @@
     <p>
         <h3 class="header-text">&nbsp; About Me</h3>
         I am a Software Engineer and Photographer based in Bonita Springs, Florida.<br><br> While I enjoy designing software
-        for a living, my passion lies in photography <br>and portraiture - my LightWork. <br><br> In my free moments, I explore
+        for a living, my passion lies in photography <br>and portraiture. <br><br> In my free moments, I explore
         and document SWFL, highlighting the charm that many simply don't believe exists.
     </p>
 </div>
@@ -84,12 +86,11 @@
 </div>
 <div ng-if="vm.currentTab === 6" class="container main-container round">
 
-    <h3 class="header-text">&nbsp; Contact</h3>
-    
-    <div class="col-lg-6 no-shoulder">
-        <img src="https://c1.staticflickr.com/3/2947/33195516380_804cfa63d5_c.jpg" width="465px;" height="337px;">
-    </div>
-    <div class="col-lg-6 no-shoulder">
+    <h3 class="header-text">&nbsp; Contact</h3>  
+    <!--<div class="col-md-6 no-shoulder">
+        <img src="https://c1.staticflickr.com/3/2947/33195516380_804cfa63d5_c.jpg" class="img-circle">
+    </div>-->
+    <div class="col-md-12 no-shoulder">
         <ul class="list-group">
             <li ng-click="vm.goLink('tel:12392006143', true)"class="list-group-item"><i class="fa fa-phone-square" aria-hidden="true"></i> 239 200 6143</li>
             <li ng-click="vm.goLink('mailto:rrmaksimov@gmail.com', true)"class="list-group-item"><i class="fa fa-envelope-o" aria-hidden="true"></i> rrmaksimov@gmail.com</li>
