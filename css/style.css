@@ -37,20 +37,8 @@ body {
   color: #ffffff;
 }
 
-/* Grow */
-
-
-
 img.logo{
     max-height: 70px;    
-}
-
-.navbar-brand,
-.navbar-nav li a {
-    line-height: 70px;
-    max-height: 100px;
-    height: 70px;
-    padding-top: 5px;
 }
 
 .navbar-fixed-top.scrolled {
@@ -118,6 +106,13 @@ img.logo{
     background-color: #35495f;
 }
 
+@media screen and (min-width: 768px) {
+
+.navbar-brand {
+    display: none;
+  }
+}
+
 .navbar {background-color: transparent;}
 
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {color: #ecf0f1;}
@@ -145,7 +140,7 @@ blue: #35495f
     height: 100%;
     width: 100%;
     background: #ecf0f1;
-    margin-top: 65px;
+    margin-top: 50px;
     padding-top: 35px;
     padding-bottom: 35px;
 }
@@ -213,7 +208,11 @@ blue: #35495f
 }
 
 .navbar-collapse {
-  text-align:center;
+  padding-top: 5px;
+}
+
+.navbar-brand {
+    padding-top: 5px;
 }
 
 
