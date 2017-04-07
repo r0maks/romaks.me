@@ -215,7 +215,6 @@ blue: #35495f
     padding-top: 5px;
 }
 
-
 .footer {
     font-family: geosans;
   margin: 20px;
@@ -231,7 +230,6 @@ blue: #35495f
 #photos {
   /* Prevent vertical gaps */
   line-height: 0;
-   
   -webkit-column-count: 3;
   -webkit-column-gap:   4px;
   -moz-column-count:    3;
@@ -273,6 +271,10 @@ blue: #35495f
   -webkit-column-count: 1;
   column-count:         1;
   }
+}
+
+.progress {
+    height: 40px;
 }
 
 .modal-dialog {

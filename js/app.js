@@ -15,6 +15,7 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     vm.setActiveImage = setActiveImage;
     vm.checkDisable = checkDisable;
     vm.goLink = goLink;
+    vm.imgLoaded = imgLoaded;
 
     function checkActive(tabVal) {
         if (tabVal === vm.currentTab) {
@@ -73,6 +74,21 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
         }
     }
 
+    vm.portraitsLoaded = 0;
+    vm.allPortraitsLoaded = false
+    vm.portraitPercentage = 0;;
+    
+    function imgLoaded(image){
+       vm.portraitsLoaded++;
+
+       if(vm.portraitsLoaded === vm.photos.length){
+           vm.allPortraitsLoaded = true;
+       }
+
+        vm.portraitPercentage =  (vm.portraitsLoaded / vm.photos.length) * 100;
+        vm.portraitPercentage = Math.round(vm.portraitPercentage * 100) / 100
+    }
+
     //TODO Make a showcase album set
     function getPortraitImages() {
         var showCaseAlbumId = '72157665034972542';
@@ -112,6 +128,18 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
         vm.currentTab = 1;
     }
 }]);
+
+app.directive('imageonload', function() {
+        return {
+            restrict: 'A',
+            link: function(scope, element, attrs) {
+                element.bind('load', function() {
+                    //call the function that was passed
+                    scope.$apply(attrs.imageonload);
+                });
+            }
+        };
+})
 
 $(function () {
     $(document).scroll(function () {
