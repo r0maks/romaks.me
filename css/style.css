@@ -20,7 +20,7 @@
 body {
     color: #35495f;
     margin:0px auto;
-    width: 960px; 
+    max-width: 960px; 
     background-image: url("pattern.png");
 }
 
@@ -37,20 +37,8 @@ body {
   color: #ffffff;
 }
 
-/* Grow */
-
-
-
 img.logo{
     max-height: 70px;    
-}
-
-.navbar-brand,
-.navbar-nav li a {
-    line-height: 70px;
-    max-height: 100px;
-    height: 70px;
-    padding-top: 5px;
 }
 
 .navbar-fixed-top.scrolled {
@@ -118,16 +106,27 @@ img.logo{
     background-color: #35495f;
 }
 
+@media screen and (min-width: 768px) {
+
+.navbar-brand {
+    display: none;
+  }
+}
+
 .navbar {background-color: transparent;}
 
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {color: #ecf0f1;}
 
-@media only screen and (max-width: 766px) {
-.collapsing, .in {background-color: #f7f7f7;}
+@media only screen and (max-width: 766px) 
+{
+.collapsing, .in 
+{
+    background-color: #f7f7f7;
+}
 .collapsing ul li a, .in ul li a {color: #555!important;}
 .collapsing ul li a:hover, .in ul li a:hover {color: #f1f1f1!important;}
-}
 
+}
 
 /*
 orange: #dc716c;
@@ -141,7 +140,7 @@ blue: #35495f
     height: 100%;
     width: 100%;
     background: #ecf0f1;
-    margin-top: 65px;
+    margin-top: 50px;
     padding-top: 35px;
     padding-bottom: 35px;
 }
@@ -189,6 +188,14 @@ blue: #35495f
     display: block;
     margin-left: auto;
     margin-right: auto;
+    /*max-width: 55% !important;*/
+}
+
+/* width of site is 960px*/
+@media only screen and (min-width: 960px){
+    .centered-image{
+    max-width: 100% !important;
+}
 }
 
 .page-content {
@@ -201,9 +208,12 @@ blue: #35495f
 }
 
 .navbar-collapse {
-  text-align:center;
+  padding-top: 5px;
 }
 
+.navbar-brand {
+    padding-top: 5px;
+}
 
 .footer {
     font-family: geosans;
@@ -220,7 +230,6 @@ blue: #35495f
 #photos {
   /* Prevent vertical gaps */
   line-height: 0;
-   
   -webkit-column-count: 3;
   -webkit-column-gap:   4px;
   -moz-column-count:    3;
@@ -264,8 +273,13 @@ blue: #35495f
   }
 }
 
+.progress {
+    height: 40px;
+}
+
 .modal-dialog {
-    width: 960px !important;
+    max-width: 960px !important;
+    width: 100%;
     margin: 30px auto;
 }
 
@@ -275,15 +289,22 @@ blue: #35495f
 }
 
 img.resize{
-    width:auto; /* you can use % */
-    height: 600px;
+    /*width:auto; 
+    height: 100%;*/
+    max-width: 100% !important;
+    max-height: 400px;
 }
 
-.btn-primary {
+.btn-default {
     /*border-color: #dc716c;
     background-color: #dc716c;*/
-    color: #ecf0f1;
     font-family: cocogoose;
+}
+
+.arrow{
+    font-size: 40px;
+    width: 80px;
+    background: transparent;
 }
 
 .post-content {
@@ -304,7 +325,7 @@ img.resize{
 .list-group-item{
     background-color: #ecf0f1;
     font-family: geosans;
-    font-size: 35px;
+    font-size: 32px;
     cursor: pointer;
     height: 100%; overflow: auto;
 }
