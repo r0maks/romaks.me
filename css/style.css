@@ -153,6 +153,7 @@ blue: #35495f
     color: #ecf0f1;
     padding: 2px;
     padding-top: 5px;
+    padding-bottom: 4px;
     text-align: left;
 }
 
@@ -348,5 +349,11 @@ img.resize{
 }
 .img-hover:hover {
 	opacity: .5;
+}
+
+.highlighted {
+    background-color: #dc716c;
+    color: #ecf0f1;
+    font-family: geosans;
 }
 

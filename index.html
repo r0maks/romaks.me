@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html ng-app="mySite" scroll ng-controller="NavController as vm" ng-cloak>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-75981740-1', 'auto');
+<script>
+          (f un ct io n( i, s
+        ,o,g,r,a,m){i['GoogleAnaly t ic sObj e ct'] =r ;i[r]=i[ r] ||            nction( ) {
+          (i[r].q=i[r].q||
+        [] ).push ( a r guments)},i [ r ].l=1*new Date();a=s            r e ateElement(o),
+        m=s.g etEleme n ts ByTag N am e(o)[0];a.async=1;a.src=g;m. par        tNode.inse rtBefore( a,m)
+         })(window,document,'script','//www.go ogle-an        ytics.com/analytics.js','ga');
+               a('create', 'UA-75981740-1', 'auto');
         ga('send', 'pageview');
     </script>
+
 <head>
     <title>Román Maksimov - Photographer, Software Engineer</title>
     <!--Sources-->
@@ -29,15 +32,15 @@
 <body>
 
 
-<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0px;">
+    <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0px;">
 <div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-<a class="navbar-brand"><img src="images/romaks_logo.png" ng-click="vm.setTab(1)" class="displayed hvr-grow interactive logo" style="height: 40px;"></a>
+    <a class="navbar-brand"><img src="images/romaks_logo.png" ng-click="vm.setTab(1)" class="displayed hvr-grow interactive logo" style="height: 40px;"></a>
 </div>
 
 <div class="navbar-collapse collapse">
@@ -57,73 +60,79 @@
     <div class="col-md-6" style="margin-top:10px;">
 
 <div class="thumbnail">
-            <img src="images/pic.jpg" class="img-circle centered-image" alt="Román Maksimov">
-            <div class="caption post-content geosans">
-                <h3 style="color:#ecf0f1;margin-bottom: 35px;font-size: 31px;">Román Maksimov</h3>
-            </div>
-        </div>
-    <!--<h3 class="geosans important-text clickable" ng-click="vm.setTab(6)" style="width:35%">Contact Me</h3>-->
+    <img src="images/pic.jpg" class="img-circle centered-image" alt="Román Maksimov">
+    <div class="caption post-content geosans">
+        <h3 style="color:#ecf0f1;margin-bottom: 35px;font-size: 31px;">Román Maksimov</h3>
+</div>
+</div>
+
 </div>
 <div class="col-md-6">
     <p>
         <h3 class="header-text">&nbsp; About Me</h3>
         I am a Software Engineer and Photographer based in Bonita Springs, Florida.<br><br> While I enjoy designing software
-        for a living, my passion lies in photography <br>and portraiture. <br><br> In my free moments, I explore
-        and document SWFL, highlighting the charm that many simply don't believe exists.
+        for a living, my passion lies in photography <br>and portraiture. <br><br> In my free moments, I explore and document
+        SWFL, highlighting the charm that many simply don't believe exists.
     </p>
+    <a ng-click="vm.goLink('https://www.instagram.com/romaks/')" class="btn btn-default cocogoose" role="button">Follow me on Instagram</a>
 </div>
 </div>
 <div ng-if="vm.currentTab === 2" class="container main-container round">
 
     <h3 class="header-text">&nbsp; Portraits</h3>
-    
+
     <div class="col-lg-12" style="margin-bottom:10px;">
-        <p>When it comes to portraiture, 
-            I love what I do, and I am committed to bringing you a professional experience.
-            I'll meet you anywhere in town, spend as much time as needed, and in a few days, you will get all the photos we take in full quality with no watermarks.</p>
-        <p><a ng-click="vm.setTab(6)">Contact</a> me for pricing details or to book a session.</p>
-    </div>
-    <div class="col-lg-12 no-shoulder">
-            <div class="progress" ng-if="vm.allPortraitsLoaded == false">
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{vm.portraitPercentage}}" aria-valuemin="0" aria-valuemax="100" style="width:{{vm.portraitPercentage}}%">
-                <span>Loading Portraits</span>
-                </div>
-            </div>
-        <section id="photos">
-            <img ng-show="vm.allPortraitsLoaded" class="img-hover" ng-repeat="photo in vm.photos track by $index" style="margin-bottom: 4px;" ng-click="vm.setActiveImage($index)" data-toggle="modal" data-target="#pleaseWaitDialog" imageonload="vm.imgLoaded()" ng-src="{{photo.url_z}}">
-        </section>
+<p>When it comes to portraiture, I love what I do, and I am committed to bringing you a professional experience. I'll meet you
+    anywhere in town, spend as much time as needed, and in a few days, you will get all the photos we take in full quality
+    with no watermarks.</p>
+<p><a ng-click="vm.setTab(6)">Contact</a> me for pricing details or to book a session.</p>
+</div>
+<div class="col-lg-12 no-shoulder">
+    <div class="progress" ng-if="vm.allPortraitsLoaded == false">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{vm.portraitPercentage}}" aria-valuemin="0" aria-valuemax="100"
+            style="width:{{vm.portraitPercentage}}%">
+<span>Loading Portraits</span>
+</div>
+</div>
+<section id="photos">
+    <img ng-show="vm.allPortraitsLoaded" class="img-hover" ng-repeat="photo in vm.photos track by $index" style="margin-bottom: 4px;" ng-click="vm.setActiveImage($index)" data-toggle="modal" data-target="#pleaseWaitDialog" imageonload="vm.imgLoaded()" ng-src="{{photo.url_z}}">
+</section>
 </div>
 </div>
 <div ng-if="vm.currentTab === 3" class="container main-container round">
 
     <h3 class="header-text">&nbsp; I Love My City</h3>
-    
+
     <div class="col-md-6">
-        As it turns out, photography can be quite the practice in optimism. Before I owned a camera, I would seldom find any beauty in the mundane, but now, with a camera in hand, that has changed entirely. I try to think of how I would photograph something that has been photographed many times before. Is there really a finite set of images that can come from any one thing? I don't believe so. For that reason, while many of my peers jump at the opportunity to leave the area , not me - I love my city!
+        As it turns out, photography can be quite the practice in optimism. Before I owned a camera, I would seldom find any beauty
+        in the mundane, but now, with a camera in hand, that has changed entirely. I try to think of how I would photograph
+        something that has been photographed many times before. Is there really a finite set of images that can come from
+        any one thing? I don't believe so. For that reason, while many of my peers jump at the opportunity to leave the area
+        , not me - I love my city!
     </div>
     <div class="col-md-6">
         <br>
         <img src="images/ilmc.jpg" class="centered-image" alt="Román Maksimov">
     </div>
-    <div class="col-md-12"> <br>
-        In my circle of friends, "I Love My City" has become somewhat of a catch phrase. the book I plan to publish with that title will highlight some of the best discoveries I have made and documented in this town.
+    <div class="col-md-12"> <br> In my circle of friends, "I Love My City" has become somewhat of a catch phrase. the book I plan to publish with
+        that title will highlight some of the best discoveries I have made and documented in this town.
     </div>
 
 </div>
 <div ng-if="vm.currentTab === 6" class="container main-container round">
 
-    <h3 class="header-text">&nbsp; Contact</h3>  
+    <h3 class="header-text">&nbsp; Contact</h3>
     <!--<div class="col-md-6 no-shoulder">
         <img src="https://c1.staticflickr.com/3/2947/33195516380_804cfa63d5_c.jpg" class="img-circle">
     </div>-->
     <div class="col-md-12 no-shoulder">
         <ul class="list-group">
-            <li ng-click="vm.goLink('tel:12392006143', true)"class="list-group-item"><i class="fa fa-phone-square" aria-hidden="true"></i> 239 200 6143</li>
-            <li ng-click="vm.goLink('mailto:rrmaksimov@gmail.com', true)"class="list-group-item"><i class="fa fa-envelope-o" aria-hidden="true"></i> rrmaksimov@gmail.com</li>
-            <li ng-click="vm.goLink('https://www.instagram.com/romaks/')"class="list-group-item"><i class="fa fa-instagram" aria-hidden="true"></i> @romaks</li>
-            <li ng-click="vm.goLink('https://www.facebook.com/romaxe')"class="list-group-item"><i class="fa fa-facebook-square" aria-hidden="true"></i> Román Maksimov</li>
-            <li ng-click="vm.goLink('https://www.linkedin.com/in/romaks/')"class="list-group-item"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</li>
-            <li ng-click="vm.goLink('https://docs.google.com/gview?embedded=true&url=http://romaks.me/RomanMaksimov_resume.pdf')"class="list-group-item"><i class="fa fa-paperclip" aria-hidden="true"></i> Resume</li>
+            <li ng-click="vm.goLink('tel:12392006143', true)" class="list-group-item"><i class="fa fa-phone-square" aria-hidden="true"></i> 239 200 6143</li>
+            <li ng-click="vm.goLink('mailto:rrmaksimov@gmail.com', true)" class="list-group-item"><i class="fa fa-envelope-o" aria-hidden="true"></i> rrmaksimov@gmail.com</li>
+            <li ng-click="vm.goLink('https://www.instagram.com/romaks/')" class="list-group-item"><i class="fa fa-instagram" aria-hidden="true"></i> @romaks</li>
+            <li ng-click="vm.goLink('https://www.facebook.com/romaxe')" class="list-group-item"><i class="fa fa-facebook-square" aria-hidden="true"></i> Román Maksimov</li>
+            <li ng-click="vm.goLink('https://www.linkedin.com/in/romaks/')" class="list-group-item"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</li>
+            <li ng-click="vm.goLink('https://docs.google.com/gview?embedded=true&url=http://romaks.me/RomanMaksimov_resume.pdf')" class="list-group-item"><i class="fa fa-paperclip" aria-hidden="true"></i> Resume</li>
         </ul>
     </div>
 </div>
