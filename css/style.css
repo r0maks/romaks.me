@@ -141,8 +141,8 @@ blue: #35495f
     width: 100%;
     background: #ecf0f1;
     margin-top: 50px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .header-text{
@@ -357,3 +357,9 @@ img.resize{
     font-family: geosans;
 }
 
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #dc716c;
+}
