@@ -67,9 +67,9 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
 
     function goLink(link, flag) {
 
-        if(flag){
+        if (flag) {
             $window.open(link);
-        }else{
+        } else {
             $window.open(link, "_blank");
         }
     }
@@ -77,15 +77,15 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     vm.portraitsLoaded = 0;
     vm.allPortraitsLoaded = false
     vm.portraitPercentage = 0;;
-    
-    function imgLoaded(image){
-       vm.portraitsLoaded++;
 
-       if(vm.portraitsLoaded === vm.photos.length){
-           vm.allPortraitsLoaded = true;
-       }
+    function imgLoaded(image) {
+        vm.portraitsLoaded++;
 
-        vm.portraitPercentage =  (vm.portraitsLoaded / vm.photos.length) * 100;
+        if (vm.portraitsLoaded === vm.photos.length) {
+            vm.allPortraitsLoaded = true;
+        }
+
+        vm.portraitPercentage = (vm.portraitsLoaded / vm.photos.length) * 100;
         vm.portraitPercentage = Math.round(vm.portraitPercentage * 100) / 100
     }
 
@@ -129,17 +129,17 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     }
 }]);
 
-app.directive('imageonload', function() {
-        return {
-            restrict: 'A',
-            link: function(scope, element, attrs) {
-                element.bind('load', function() {
-                    //call the function that was passed
-                    scope.$apply(attrs.imageonload);
-                });
-            }
-        };
-})
+app.directive('imageonload', function () {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+            element.bind('load', function () {
+                //call the function that was passed
+                scope.$apply(attrs.imageonload);
+            });
+        }
+    };
+});
 
 $(function () {
     $(document).scroll(function () {
@@ -148,8 +148,8 @@ $(function () {
     });
 });
 
-$(document).on('click','.navbar-collapse.in',function(e) {
-    if( $(e.target).is('a') ) {
+$(document).on('click', '.navbar-collapse.in', function (e) {
+    if ($(e.target).is('a')) {
         $(this).collapse('hide');
     }
 });
