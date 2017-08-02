@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="mySite" scroll ng-controller="NavController as vm" ng-cloak>
+
 <head>
     <title>Román Maksimov - Photographer, Software Engineer</title>
     <!--Sources-->
@@ -35,11 +36,11 @@
 <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav" ng-class=" {min:boolChangeClass}">
         <li><a ng-click="vm.setTab(1)" class="nav-option {{vm.checkActive(1)}}">about</a></li>
+        <li><a ng-click="vm.setTab(6)" class="nav-option {{vm.checkActive(6)}}">contact</a></li>
         <li><a ng-click="vm.setTab(2)" class="nav-option {{vm.checkActive(2)}}">portraits</a></li>
         <!--<li><a ng-click="vm.setTab(3)" class="nav-option {{vm.checkActive(3)}}">lightwork</a></li>-->
-        <!--<li><a ng-click="vm.setTab(4)" class="nav-option {{vm.checkActive(4)}}">prints</a></li>-->
-        <li><a ng-click="vm.setTab(3)" class="nav-option {{vm.checkActive(3)}}">ILMC</a></li>
-        <li><a ng-click="vm.setTab(6)" class="nav-option {{vm.checkActive(6)}}">contact</a></li>
+        <li><a ng-click="vm.setTab(4)" class="nav-option {{vm.checkActive(4)}}">projects</a></li>
+        <!--<li><a ng-click="vm.setTab(3)" class="nav-option {{vm.checkActive(3)}}">ILMC</a></li>-->
         <!--<li><a ng-click="vm.setTab(5)" class="nav-option {{vm.checkActive(5)}}">resume</a></li>-->
     </ul>
 </div>
@@ -66,8 +67,9 @@
     <a ng-click="vm.goLink('https://www.instagram.com/romaks/')" class="btn btn-default cocogoose" role="button">Follow me on Instagram</a>
 </div>
 <div class="col-md-12" style="margin-top: 20px;">
-    <hr>
-    <iframe src="https://snapwidget.com/embed/383066" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height:auto"></iframe>
+<hr>
+<iframe src="https://snapwidget.com/embed/383066" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no"
+    style="border:none; overflow:hidden; width:100%; height:auto"></iframe>
 </div>
 </div>
 <div ng-if="vm.currentTab === 2" class="container main-container round">
@@ -92,6 +94,18 @@
 </section>
 </div>
 </div>
+
+
+
+<div ng-if="vm.currentTab === 4" class="container main-container round">
+
+    <h3 class="header-text">&nbsp; Projects</h3>
+
+    <!--TODO Need like a list view of all the cool shit...maybe a directive to display each of the experiments -->
+
+
+</div>
+
 <div ng-if="vm.currentTab === 3" class="container main-container round">
 
     <h3 class="header-text">&nbsp; I Love My City</h3>
@@ -105,7 +119,7 @@
         in the mundane, but now, with a camera in hand, that has changed entirely. I try to think of how I would photograph
         something that has been photographed many times before. Is there really a finite set of images that can come from
         any one thing? I don't believe so. For that reason, while many of my peers jump at the opportunity to leave the area
-        , not me - I love my city! 
+        , not me - I love my city!
     </div>
     <div class="col-md-12"> <br> In my circle of friends, "I Love My City" has become somewhat of a catch phrase. the book I plan to publish with
         that title will highlight some of the best discoveries I have made and documented in this town.
