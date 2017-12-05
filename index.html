@@ -36,9 +36,9 @@
     <ul class="nav navbar-nav" ng-class=" {min:boolChangeClass}">
         <li><a ng-click="vm.setTab(1)" class="nav-option {{vm.checkActive(1)}}">about</a></li>
         <li><a ng-click="vm.setTab(2)" class="nav-option {{vm.checkActive(2)}}">portraits</a></li>
-        <!--<li><a ng-click="vm.setTab(3)" class="nav-option {{vm.checkActive(3)}}">lightwork</a></li>-->
+        <!--<li><a ng-click="vm.setTab(3)" class="nav-option {{vm.checkActive(3)}}">art</a></li>-->
         <!--<li><a ng-click="vm.setTab(4)" class="nav-option {{vm.checkActive(4)}}">prints</a></li>-->
-        <li><a ng-click="vm.setTab(3)" class="nav-option {{vm.checkActive(3)}}">ILMC</a></li>
+        <!--<li><a ng-click="vm.setTab(3)" class="nav-option {{vm.checkActive(3)}}">ILMC</a></li>-->
         <li><a ng-click="vm.setTab(6)" class="nav-option {{vm.checkActive(6)}}">contact</a></li>
         <!--<li><a ng-click="vm.setTab(5)" class="nav-option {{vm.checkActive(5)}}">resume</a></li>-->
     </ul>
@@ -67,7 +67,7 @@
 </div>
 <div class="col-md-12" style="margin-top: 20px;">
     <hr>
-    <iframe src="https://snapwidget.com/embed/383066" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height:auto"></iframe>
+    <iframe src="https://snapwidget.com/embed/383066" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height:100%"></iframe>
 </div>
 </div>
 <div ng-if="vm.currentTab === 2" class="container main-container round">
@@ -94,30 +94,13 @@
 </div>
 <div ng-if="vm.currentTab === 3" class="container main-container round">
 
-    <h3 class="header-text">&nbsp; I Love My City</h3>
+    <h3 class="header-text">&nbsp; Art</h3>
 
-    <div class="col-md-6">
-        <br>
-        <img src="images/ilmc.jpg" class="centered-image" alt="Román Maksimov">
-    </div>
-    <div class="col-md-6">
-        As it turns out, photography can be quite the practice in optimism. Before I owned a camera, I would seldom find any beauty
-        in the mundane, but now, with a camera in hand, that has changed entirely. I try to think of how I would photograph
-        something that has been photographed many times before. Is there really a finite set of images that can come from
-        any one thing? I don't believe so. For that reason, while many of my peers jump at the opportunity to leave the area
-        , not me - I love my city! 
-    </div>
-    <div class="col-md-12"> <br> In my circle of friends, "I Love My City" has become somewhat of a catch phrase. the book I plan to publish with
-        that title will highlight some of the best discoveries I have made and documented in this town.
-    </div>
 
 </div>
 <div ng-if="vm.currentTab === 6" class="container main-container round">
 
     <h3 class="header-text">&nbsp; Contact</h3>
-    <!--<div class="col-md-6 no-shoulder">
-        <img src="https://c1.staticflickr.com/3/2947/33195516380_804cfa63d5_c.jpg" class="img-circle">
-    </div>-->
     <div class="col-md-12 no-shoulder">
         <ul class="list-group">
             <li ng-click="vm.goLink('tel:12392006143', true)" class="list-group-item"><i class="fa fa-phone-square" aria-hidden="true"></i> 239 200 6143</li>
