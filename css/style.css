@@ -147,12 +147,12 @@ blue: #35495f
 .header-text{
     font-family: cocogoose;
     margin-top: 0px;
-    font-size: 36px;
+    font-size: 30px;
     background: #dc716c;
     color: #ecf0f1;
-    padding: 2px;
+    /* padding: 2px; */
     padding-top: 5px;
-    padding-bottom: 4px;
+    /* padding-bottom: 4px; */
     text-align: left;
 }
 
