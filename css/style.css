@@ -327,6 +327,10 @@ blue: #35495f
     font-family: cocogoose;
 }
 
+.modal-image-loading {
+    filter: blur(10px);
+}
+
 .modal-content {
     margin-top: 15px;
 }

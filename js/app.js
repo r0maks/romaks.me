@@ -42,6 +42,8 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
 
     // pass in -1 or +1
     function changeImage(direction) {
+
+        vm.showModalImage=false;
         vm.currentImageIndex = vm.currentImageIndex + direction;
         vm.currentImage = vm.photos[vm.currentImageIndex];
     }
