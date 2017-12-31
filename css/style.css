@@ -328,7 +328,7 @@ blue: #35495f
 }
 
 .modal-image-loading {
-    filter: blur(10px);
+    filter: brightness(30%);
 }
 
 .modal-content {
