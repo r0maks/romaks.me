@@ -288,6 +288,10 @@ blue: #35495f
     background: #ecf0f1;
 }
 
+#imageDialog{
+    padding-right: 0px !important;
+}
+
 img.resize{
  max-width: 100vw !important;
  max-height: 80vh !important;
