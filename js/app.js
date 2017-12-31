@@ -103,7 +103,7 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
             .success(function (data) {
                 if (data && data.photoset && data.photoset.photo.length) {
                     vm.photos = data.photoset.photo;
-                    shuffleSet(vm.photos);
+                    //shuffleSet(vm.photos);
                     vm.currentImage = vm.photos[0];
                     vm.isLoading = false;
                     if (vm.portraitImagesLoaded == null || vm.portraitImagesLoaded == false) {
