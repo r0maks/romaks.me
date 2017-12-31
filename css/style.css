@@ -318,6 +318,19 @@ blue: #35495f
         -webkit-user-select: none;
 }
 
+.modal-count {
+    color: white;
+    position: absolute;
+    top: 25px;
+    left: 12px;
+    font-size: 20px;
+    font-family: cocogoose;
+}
+
+.modal-content {
+    margin-top: 15px;
+}
+
 /* Position the "next button" to the right */
 .modal-next {
     right: 0;
