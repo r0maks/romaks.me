@@ -21,8 +21,7 @@ body {
     color: #1c2631;
     margin:0px auto;
     max-width: 960px; 
-    background-color: #1c2631;
-    background-image: url("pattern.png");
+    background-image: url("round2.png");
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
      -ms-animation: fadein 2s; /* Internet Explorer */
