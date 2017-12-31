@@ -280,7 +280,7 @@ blue: #35495f
 .modal {
     position: fixed;
     z-index: 9999999999999999999999999999999999999;
-    padding-top: 100px;
+    padding-top: 45px;
     left: 0;
     top: 0;
     width: 100%;
@@ -309,7 +309,6 @@ blue: #35495f
         top: 250px;
         width: auto;
         padding: 16px;
-        margin-top: -50px;
         color: white;
         font-weight: bold;
         font-size: 20px;
@@ -336,7 +335,9 @@ blue: #35495f
 }
 
 img.resize{
-   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn-default {
