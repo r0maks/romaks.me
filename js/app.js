@@ -3,6 +3,7 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     var vm = this;
 
     vm.photos = [];
+    vm.currentTab = 1;
     // start on 0 index 
     vm.currentImageIndex = 0;
     vm.portraitImagesLoaded = false
@@ -43,7 +44,7 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     // pass in -1 or +1
     function changeImage(direction) {
 
-        vm.showModalImage=false;
+        vm.imageLoading=true;
         vm.currentImageIndex = vm.currentImageIndex + direction;
         vm.currentImage = vm.photos[vm.currentImageIndex];
     }
@@ -94,10 +95,10 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     //TODO Make a showcase album set
     function getPortraitImages() {
         var showCaseAlbumId = '72157665034972542';
-        return getAlbumImages(showCaseAlbumId);
+        return getAlbumImages(showCaseAlbumId, vm.portraitImagesLoaded);
     }
 
-    function getAlbumImages(photoSetId) {
+    function getAlbumImages(photoSetId, flagToSet) {
         vm.isLoading = true;
         return $http.get('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=a204dbf28ba325b9f717d739309ac663&photoset_id=' + photoSetId + '&extras=url_q%2C+url_z%2Curl_l%2Ctags&format=json&nojsoncallback=1')
             .success(function (data) {
@@ -106,8 +107,8 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
                     //shuffleSet(vm.photos);
                     vm.currentImage = vm.photos[0];
                     vm.isLoading = false;
-                    if (vm.portraitImagesLoaded == null || vm.portraitImagesLoaded == false) {
-                        vm.portraitImagesLoaded = true
+                    if (flagToSet == null || flagToSet == false) {
+                        flagToSet = true
                     }
                 }
             });
@@ -122,12 +123,6 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
             a[i - 1] = a[j];
             a[j] = x;
         }
-    }
-
-    activate();
-
-    function activate() {
-        vm.currentTab = 1;
     }
 }]);
 
