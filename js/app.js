@@ -44,7 +44,7 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     // pass in -1 or +1
     function changeImage(direction) {
 
-        vm.imageLoading=true;
+        vm.imageLoading = true;
         vm.currentImageIndex = vm.currentImageIndex + direction;
         vm.currentImage = vm.photos[vm.currentImageIndex];
     }
@@ -136,6 +136,29 @@ app.directive('imageonload', function () {
             });
         }
     };
+});
+
+app.directive('photoViewer', function () {
+    
+    function PhotoViewerController () {
+        
+    }
+
+    return {
+        restrict: 'EA',
+        scope: {
+            photoSetId: '=',
+        },
+        controllerAs: 'vm',
+        controller: PhotoViewerController,
+        templateUrl: 'photo-viewer.html'
+    };
+});
+
+app.service('flickrService', function() {
+    this.myFunc = function (x) {
+        return x.toString(16);
+    }
 });
 
 $(function () {
