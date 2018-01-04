@@ -320,7 +320,8 @@ blue: #35495f
     color: white;
     position: absolute;
     top: 25px;
-    left: 38.5%;
+    left: 40%;
+    right: 40%;
     font-size: 20px;
     font-family: cocogoose;
 }
