@@ -100,8 +100,8 @@
                 </div>
             </div>
             <section id="photos">
-                <img ng-show="vm.allPortraitsLoaded" class="img-hover" ng-repeat="photo in vm.photos track by $index" style="margin-bottom: 4px;"
-                    ng-click="vm.setActiveImage($index)" data-toggle="modal" data-target="#imageDialog" imageonload="vm.imgLoaded()"
+                <img ng-show="vm.allPortraitsLoaded" class="img-hover" ng-repeat="photo in vm.portraits track by $index" style="margin-bottom: 4px;"
+                    ng-click="vm.setActivePortrait($index)" imageonload="vm.imgLoaded()"
                     ng-src="{{photo.url_z}}">
             </section>
         </div>
@@ -132,20 +132,6 @@
             </ul>
         </div>
     </div>
-
-    <!-- <div id="imageDialog" style="padding-right:0px !important" class="modal fade">
-        <span class="modal-count">{{(vm.currentImageIndex + 1)+ ' / ' + (vm.photos.length)}}</span>
-        <span class="modal-close" data-dismiss="modal">×</span>
-        <div class="modal-dialog">
-            <div class="modal-content">
-                    <span class="modal-prev pull-left" ng-show="!vm.checkDisable(-1)" ng-click="vm.changeImage(-1)"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
-                    <span class="modal-next pull-right" ng-show="!vm.checkDisable(1)" ng-click="vm.changeImage(1)"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                    <div ng-show="vm.imageLoading" class="loading"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
-                    <img id="currentImage" class="displayed resize centered-image" ng-class="{ 'modal-image-loading': vm.imageLoading}" ng-show="vm.currentImage.url_l"
-                        ng-src="{{vm.currentImage.url_l}}" imageonload="vm.imageLoading=false"/>
-            </div>
-        </div>
-    </div> -->
 
     <photo-viewer></photo-viewer>
 
