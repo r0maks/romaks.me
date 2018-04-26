@@ -47,7 +47,9 @@ body {
 }
 
 img.logo{
-    max-height: 70px;    
+    max-height: 57px;
+    height: 35px;
+    padding-top: 5px;    
 }
 
 .navbar-fixed-top.scrolled {
