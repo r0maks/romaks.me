@@ -15,7 +15,6 @@ app.controller('NavController', ['$http', '$scope', '$window', function ($http, 
     vm.setActivePortrait = setActivePortrait;
     vm.goLink = goLink;
     vm.imgLoaded = imgLoaded;
-    vm.currentYear = (new Date()).getFullYear();
 
     function checkActive(tabVal) {
         if (tabVal === vm.currentTab) {
