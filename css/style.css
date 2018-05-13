@@ -462,3 +462,11 @@ hr {
     border: 0;
     border-top: 1px solid #e94f37;
 }
+
+.footer {
+    font-family: geosans;
+    font-size: 16px;
+    color:  #ecf0f1;
+    margin-top: 10px;
+    text-align: center;
+}
