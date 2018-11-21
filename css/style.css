@@ -145,6 +145,7 @@ blue: #35495f
     background: #e94f37;
     color: #ecf0f1;
     text-align: left;
+    margin-bottom: 25px;
 }
 
 .geosans{
@@ -386,6 +387,7 @@ img.resize{
     font-family: foco, sans-serif;
     font-weight: 900;
     font-style: normal;
+    margin-top: 25px;
 }
 
 .btn-group{
