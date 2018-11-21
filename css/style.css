@@ -1,22 +1,3 @@
-
-@font-face {
-    font-family: 'geosans';
-    src: url('geosanslight1-webfont.woff2') format('woff2'),
-         url('geosanslight1-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'cocogoose';
-    src: url('cocogoose.woff2') format('woff2'),
-         url('cocogoose.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-
-}
-
 body {
     /* color: #1c2631; */
     margin:0px auto;
@@ -83,8 +64,10 @@ img.logo{
 }
 
 .nav-option {
-    font-family: cocogoose;
-    font-size: 26px;
+    font-family: foco, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
     text-decoration:none;
     color: #ecf0f1 !important;
     margin-right: 7px;
@@ -140,8 +123,7 @@ blue: #35495f
 */
 .main-container {
 
-    font-family: geosans;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 32px;
     height: 100%;
     width: 100%;
@@ -149,26 +131,32 @@ blue: #35495f
     margin-top: 55px;
     padding-top: 25px;
     padding-bottom: 25px;
+    font-family: foco, sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .header-text{
-    font-family: cocogoose;
+    font-family: foco, sans-serif;
+    font-weight: 900;
+    font-style: normal;
     margin-top: 0px;
     font-size: 30px;
     background: #e94f37;
     color: #ecf0f1;
-    /* padding: 2px; */
-    padding-top: 5px;
-    /* padding-bottom: 4px; */
     text-align: left;
 }
 
 .geosans{
-    font-family: geosans;
+    font-family: foco, sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .cocogoose{
-    font-family: cocogoose;
+    font-family: foco, sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .important-text{
@@ -395,9 +383,9 @@ img.resize{
 }
 
 .btn-default {
-    /*border-color: #e94f37;
-    background-color: #e94f37;*/
-    font-family: cocogoose;
+    font-family: foco, sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .btn-group{
@@ -421,7 +409,9 @@ img.resize{
 
 .list-group-item{
     background-color: #ecf0f1;
-    font-family: geosans;
+    font-family: foco, sans-serif;
+    font-weight: 300;
+    font-style: normal;
     font-size: 32px;
     cursor: pointer;
     height: 100%; overflow: auto;
