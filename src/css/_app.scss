@@ -11,19 +11,14 @@ body {
 
 main {
 
-  h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 200px;
-  }
 }
 
 /* HEADER */
 
 header {
-  display: inline-block;
-  width: 100%;
-  background: #e74c3c;
-  height: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
 
   nav {
     float: right;
