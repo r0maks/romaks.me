@@ -46,10 +46,10 @@
     </div>
     <nav>
       <ul>
-        <li>about</li>
-        <li>resume</li>
-        <li>portraits</li>
-        <li>contact</li>
+        <li onclick="changeTab(1)">about</li>
+        <li onclick="changeTab(2)">resumé</li>
+        <li onclick="changeTab(3)">portraits</li>
+        <li onclick="changeTab(4)">contact</li>
       </ul>
     </nav>
   </header>
@@ -58,13 +58,23 @@
 
   <main role="main">
     <div class="content-card">
+      <!-- about (1) -->
+      <div class="tab-content" id="tab-1">
+        about me
+      </div>
+
+      <div class="tab-content" id="tab-2">
+          resume
+        </div>
 
     </div>
-
   </main>
 
 
   <script type="text/javascript" src="../build/app.js"></script>
+
+  <!-- for development -->
+  <script type="text/javascript" src="js/app.js"></script>
 
 </body>
 
