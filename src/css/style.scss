@@ -23,6 +23,15 @@ body {
     background: $dark-color;
 }
 
+header {
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5px;
+        width: $site-width;
+    }
+}
+
 main {
     padding-top: 15px;
     display: flex;
@@ -30,7 +39,7 @@ main {
 
     .content-card {
         height: 400px;
-        width: 1024px;
+        width: $site-width;
         background: $gray-color;
         border-radius: 2px;
         box-shadow: 0 10px 6px -6px $dark-color;
