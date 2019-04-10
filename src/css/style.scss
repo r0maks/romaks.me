@@ -23,6 +23,10 @@ body {
     background: $dark-color;
 }
 
+.accent-text {
+    color: $accent-color;
+}
+
 header {
     .header-content {
         display: flex;
@@ -54,13 +58,12 @@ main {
 .about-me {
     display: flex;
     flex-direction: row;
-
     .profile-image-container {
         img {
             max-height: 400px;
+            border-radius: 2px;
         }
     }
-
     .about-me-content {
         padding:20px;
         padding-left: 30px;
@@ -72,18 +75,58 @@ main {
 
         .name {
             font-size: 30px;
-            text-align: left;
             line-height: 45px;
-            font-family: $foco;
         }
         .by-line {
             font-size: 20px;
             font-family: $oswald;
+
         }
         .description {
-            font-family: $foco;
-            margin-top: 21px;
             font-size: 20px;
+        }
+        .ig-link {
+            cursor: pointer;
+            color: $light-color;
+            font-size: 16px;
+            margin-top: 20px;
+            background:$blue-color;
+            padding: 3px;
+            border-radius: 2px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: center;
+
+            &:hover {
+                background: $alt-blue-color;
+            }
+        }
+    }
+}
+
+.contact {
+    .contact-content {
+        padding: 20px;
+        font-size: 30px;
+        font-family: $foco;
+        font-weight: 300;
+        font-style: normal;
+        color: $dark-color;
+
+        .contact-link {
+            cursor: pointer;
+            display: flex;
+
+            .contact-icon {
+                margin-right: 10px;
+            }
+            .contact-detail {
+
+            }
+
+            &:hover {
+                color: $blue-color;
+            }
         }
     }
 }
@@ -92,13 +135,14 @@ header {
     nav {
         line-height: 40px;
         li {
-            margin-left: 20px;
+            margin-left: 15px;
             color: $light-color;
             font-family: mr-eaves-modern, sans-serif;
             font-weight: 300;
             font-style: normal;
             font-size: 30px;
             cursor: pointer;
+            border-bottom: 2px solid $dark-color;
 
             &:hover {
                 color:$accent-color;
@@ -112,6 +156,7 @@ header {
             transition: $ease-out;
             transform: scale(1.05);
             text-shadow: none;
+            border-bottom: 2px solid $accent-color;
         }
     }
 
