@@ -35,16 +35,11 @@ main {
         border-radius: 2px;
         box-shadow: 0 10px 6px -6px $dark-color;
     }
-
-    .tab-content {
-        visibility: hidden;
-    }
 }
 
 header {
     nav {
         line-height: 40px;
-
         li {
             margin-left: 20px;
             color: $light-color;
@@ -61,6 +56,12 @@ header {
                 transform: scale(1.05);
                 text-shadow: none;
             }
+        }
+        .active-tab {
+            color:$accent-color;
+            transition: ease-in-out 0.2s;
+            transform: scale(1.05);
+            text-shadow: none;
         }
     }
 

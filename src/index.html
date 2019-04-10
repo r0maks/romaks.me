@@ -46,10 +46,10 @@
     </div>
     <nav>
       <ul>
-        <li onclick="changeTab(1)">about</li>
-        <li onclick="changeTab(2)">resumé</li>
-        <li onclick="changeTab(3)">portraits</li>
-        <li onclick="changeTab(4)">contact</li>
+        <li id="tab-select-1" onclick="changeTab(1)">about</li>
+        <li id="tab-select-2" onclick="changeTab(2)">resumé</li>
+        <li id="tab-select-3" onclick="changeTab(3)">portraits</li>
+        <li id="tab-select-4" onclick="changeTab(4)">contact</li>
       </ul>
     </nav>
   </header>
@@ -64,17 +64,59 @@
       </div>
 
       <div class="tab-content" id="tab-2">
-          resume
-        </div>
+        resume
+      </div>
 
     </div>
   </main>
-
-
   <script type="text/javascript" src="../build/app.js"></script>
-
-  <!-- for development -->
-  <script type="text/javascript" src="js/app.js"></script>
+  <script>
+    var tab = 1;
+    var tabMax = 4;
+    var tabSelectorPrefix = 'tab-select-';
+    var tabPrefix = 'tab-';
+    var displayDictionary = {};
+    function changeTab(tabIndex) {
+      if (tab === tabIndex) {
+        return;
+      }
+      resetTabs();
+      hideElement(tabPrefix + tab);
+      tab = tabIndex;
+      showElement(tabPrefix + tabIndex);
+      setTabActive(tabSelectorPrefix + tab);
+    }
+    function showElement(elemId) {
+      let elem = document.getElementById(elemId);
+      if (elem) {
+        elem.style.display = displayDictionary[elemId];
+      }
+    }
+    function hideElement(elemId) {
+      let elem = document.getElementById(elemId);
+      if (elem) {
+        displayDictionary[elemId] = elem.style.display;
+        elem.style.display = 'none';
+      }
+    }
+    function setTabInactive(tabElemId) {
+      let elem = document.getElementById(tabElemId);
+      if (elem) {
+        elem.classList.remove('active-tab');
+      }
+    }
+    function setTabActive(tabElemId) {
+      let elem = document.getElementById(tabElemId);
+      if (elem) {
+        elem.classList.add('active-tab');
+      }
+    }
+    function resetTabs() {
+      for (let index = 1; index <= tabMax; index++) {
+        setTabInactive(tabSelectorPrefix + index);
+      }
+    }
+  </script>
 
 </body>
 
