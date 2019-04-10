@@ -24,7 +24,7 @@ body {
 }
 
 main {
-    padding-top: 20px;
+    padding-top: 15px;
     display: flex;
     justify-content: center;
 
@@ -47,10 +47,10 @@ header {
         li {
             margin-left: 20px;
             color: $light-color;
-            font-family: menco, sans-serif;
-            font-weight: 500;
+            font-family: mr-eaves-modern, sans-serif;
+            font-weight: 300;
             font-style: normal;
-            font-size: 27px;
+            font-size: 30px;
             cursor: pointer;
 
             &:hover {
@@ -69,8 +69,11 @@ header {
     }
 
     .header-image-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         img {
-            max-height: 35px;
+            max-height: 25px;
         }
     }
 }
