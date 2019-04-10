@@ -48,8 +48,9 @@
       <ul>
         <li id="tab-select-1" onclick="changeTab(1)">about</li>
         <li id="tab-select-2" onclick="changeTab(2)">resumé</li>
-        <li id="tab-select-3" onclick="changeTab(3)">portraits</li>
-        <li id="tab-select-4" onclick="changeTab(4)">contact</li>
+        <li id="tab-select-3" onclick="changeTab(3)">skills</li>
+        <li id="tab-select-4" onclick="changeTab(4)">portraits</li>
+        <li id="tab-select-5" onclick="changeTab(5)">contact</li>
       </ul>
     </nav>
   </header>
@@ -60,7 +61,21 @@
     <div class="content-card">
       <!-- about (1) -->
       <div class="tab-content" id="tab-1">
-        about me
+        <div class="about-me">
+          <div class="profile-image-container">
+              <img src="images/profile.jpg">
+          </div>
+          <div class="about-me-content">
+            <span class="name">Román R. Maksimov</span> <br>
+            <span class="by-line">Software Engineer, Photographer, Visual Artist, Designer</span>
+            <hr>
+            <p class="description">
+                I am a Software Engineer and visual artist based in Bonita Springs, Florida.
+                I am always looking to collaborate, so If you're a local artist or model, let's link up! <br> <br>
+                Click below to follow me on Instagram, which is the best way to see my latest art work. Prints are available upon request.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="tab-content" id="tab-2">
@@ -72,7 +87,7 @@
   <script type="text/javascript" src="../build/app.js"></script>
   <script>
     var tab = 0;
-    var tabMax = 4;
+    var tabMax = 5;
     var tabSelectorPrefix = 'tab-select-';
     var tabPrefix = 'tab-';
     function changeTab(tabIndex) {

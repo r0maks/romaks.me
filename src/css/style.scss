@@ -36,7 +36,45 @@ main {
         box-shadow: 0 10px 6px -6px $dark-color;
 
         .tab-content {
-            display: none; // gets set thru JS 
+            display: none; // gets set thru JS
+            transition: $ease-out;
+        }
+    }
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+
+    .profile-image-container {
+        img {
+            max-height: 400px;
+        }
+    }
+
+    .about-me-content {
+        padding:20px;
+        padding-left: 30px;
+        text-align: left;
+        color: $dark-color;
+        font-family: $foco;
+        font-weight: 300;
+        font-style: normal;
+
+        .name {
+            font-size: 30px;
+            text-align: left;
+            line-height: 45px;
+            font-family: $foco;
+        }
+        .by-line {
+            font-size: 20px;
+            font-family: $oswald;
+        }
+        .description {
+            font-family: $foco;
+            margin-top: 21px;
+            font-size: 20px;
         }
     }
 }
@@ -55,14 +93,14 @@ header {
 
             &:hover {
                 color:$accent-color;
-                transition: ease-in-out 0.2s;
+                transition: $ease-out;
                 transform: scale(1.05);
                 text-shadow: none;
             }
         }
         .active-tab {
             color:$accent-color;
-            transition: ease-in-out 0.2s;
+            transition: $ease-out;
             transform: scale(1.05);
             text-shadow: none;
         }
