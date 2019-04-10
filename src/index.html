@@ -71,11 +71,10 @@
   </main>
   <script type="text/javascript" src="../build/app.js"></script>
   <script>
-    var tab = 1;
+    var tab = 0;
     var tabMax = 4;
     var tabSelectorPrefix = 'tab-select-';
     var tabPrefix = 'tab-';
-    var displayDictionary = {};
     function changeTab(tabIndex) {
       if (tab === tabIndex) {
         return;
@@ -89,13 +88,12 @@
     function showElement(elemId) {
       let elem = document.getElementById(elemId);
       if (elem) {
-        elem.style.display = displayDictionary[elemId];
+        elem.style.display = 'flex';
       }
     }
     function hideElement(elemId) {
       let elem = document.getElementById(elemId);
       if (elem) {
-        displayDictionary[elemId] = elem.style.display;
         elem.style.display = 'none';
       }
     }
@@ -116,8 +114,10 @@
         setTabInactive(tabSelectorPrefix + index);
       }
     }
+    function activate() {
+      changeTab(1);
+    }
+    activate();
   </script>
-
 </body>
-
 </html>

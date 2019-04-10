@@ -34,6 +34,10 @@ main {
         background: $gray-color;
         border-radius: 2px;
         box-shadow: 0 10px 6px -6px $dark-color;
+
+        .tab-content {
+            display: none; // gets set thru JS 
+        }
     }
 }
 
@@ -43,12 +47,11 @@ header {
         li {
             margin-left: 20px;
             color: $light-color;
-            font-family: bebas-neue-rounded, sans-serif;
-            font-weight: 400;
+            font-family: menco, sans-serif;
+            font-weight: 500;
             font-style: normal;
             font-size: 27px;
             cursor: pointer;
-            text-shadow: 1px 1px $accent-color;
 
             &:hover {
                 color:$accent-color;
