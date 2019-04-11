@@ -43,7 +43,7 @@ main {
 
     .content-card {
         width: $site-width;
-        background: $gray-color;
+        background: $light-color;
         border-radius: 2px;
         box-shadow: 0 10px 6px -6px $dark-color;
 
@@ -83,6 +83,9 @@ main {
         }
         .description {
             font-size: 20px;
+            border-top: 1px solid $accent-color;
+            padding-top: 5px;
+            margin-top: 10px;
         }
         .ig-link {
             cursor: pointer;
@@ -105,22 +108,29 @@ main {
 
 .resume {
     padding: 20px;
-    padding-left: 35px;
+    padding-left: 25px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
 
     .resume-section {
         text-align: left;
+        margin-bottom: 10px;
         .section-title {
             font-family: $oswald;
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 300;
             font-style: normal;
-            color: $blue-color;
+            background: $blue-color;
+            color: $light-color;
+            padding: 5px;
+            border-radius: 2px;
+            margin-bottom: 10px;
         }
 
         .section-content {
-            margin-top:10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
             &-title {
                 font-family: $oswald;
                 font-size: 20px;
@@ -128,10 +138,19 @@ main {
                 font-style: normal;
                 color: $dark-color;
             }
+            &-byline {
+                font-family: $menco;
+                font-size: 18px;
+                font-weight: 300;
+                font-style: normal;
+                color: gray;
+                margin-left:15px;
+                margin-top: 5px;
+            }
             &-details {
                 margin-top: 5px;
                 font-family: $menco;
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 300;
                 font-style: normal;
                 color: $dark-color;
