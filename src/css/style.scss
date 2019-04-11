@@ -68,7 +68,7 @@ main {
         padding-left: 30px;
         text-align: left;
         color: $dark-color;
-        font-family: $foco;
+        font-family: $menco;
         font-weight: 300;
         font-style: normal;
 
@@ -103,12 +103,50 @@ main {
     }
 }
 
+.resume {
+    padding: 20px;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+
+    .resume-section {
+        text-align: left;
+        .section-title {
+            font-family: $oswald;
+            font-size: 28px;
+            font-weight: 300;
+            font-style: normal;
+            color: $blue-color;
+        }
+
+        .section-content {
+            margin-top:10px;
+            &-title {
+                font-family: $oswald;
+                font-size: 20px;
+                font-weight: 300;
+                font-style: normal;
+                color: $dark-color;
+            }
+            &-details {
+                margin-top: 5px;
+                font-family: $menco;
+                font-size: 20px;
+                font-weight: 300;
+                font-style: normal;
+                color: $dark-color;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
 .contact {
     width: 100%;
     .contact-content {
         padding: 15px;
         font-size: 30px;
-        font-family: $foco;
+        font-family: $menco;
         font-weight: 300;
         font-style: normal;
         color: $dark-color;
@@ -120,9 +158,6 @@ main {
 
             .contact-icon {
                 margin-right: 10px;
-            }
-            .contact-detail {
-
             }
 
             &:hover {
