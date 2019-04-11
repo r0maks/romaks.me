@@ -30,8 +30,8 @@
 
   <link rel="stylesheet" href="../build/css/app.bundle.css">
   <link rel="stylesheet" href="https://use.typekit.net/epg3ecn.css">
-  <script src="https://use.fontawesome.com/489ee0d03b.js"></script>
-  <link href="https://use.fontawesome.com/489ee0d03b.css" media="all" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
 
   <!-- ****** faviconit.com favicons ****** -->
   <link rel="shortcut icon" href="/favicon.ico">
@@ -120,9 +120,9 @@
       <div class="tab-content" id="tab-5">
         <div class="contact">
           <div class="contact-content">
-            <ul>
+            <ul class="contact-list">
               <li>
-                <div class="contact-link">
+                <div class="contact-link" onclick="openNewTab('tel:12392006143')">
                   <div class="contact-icon">
                     <i class="fa fa-phone-square" aria-hidden="true"></i>
                   </div>
@@ -132,24 +132,54 @@
                 </div>
               </li>
               <li>
-                <div class="contact-link">
+                <div class="contact-link" onclick="openNewTab('mailto:rrmaksimov@gmail.com')">
                   <div class="contact-icon">
-                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <i class="far fa-envelope"></i>
                   </div>
                   <div class="contact-detail">
                     rrmaksimov@gmail.com
                   </div>
                 </div>
               </li>
-              <li></li>
               <li>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <div class="contact-link" onclick="openNewTab('https://www.instagram.com/romaks')">
+                  <div class="contact-icon">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                  <div class="contact-detail">
+                    @romaks
+                  </div>
+                </div>
               </li>
               <li>
-                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                <div class="contact-link" onclick="openNewTab('https://www.facebook.com/romaxe')">
+                  <div class="contact-icon">
+                    <i class="fab fa-facebook-square"></i>
+                  </div>
+                  <div class="contact-detail">
+                    Facebook
+                  </div>
+                </div>
               </li>
               <li>
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                <div class="contact-link" onclick="openNewTab('https://www.linkedin.com/in/romaks/')">
+                  <div class="contact-icon">
+                    <i class="fab fa-linkedin"></i>
+                  </div>
+                  <div class="contact-detail">
+                    LinkedIn
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="contact-link" onclick="openNewTab('https://www.github.com/r0maks/')">
+                  <div class="contact-icon">
+                    <i class="fab fa-github"></i>
+                  </div>
+                  <div class="contact-detail">
+                    GitHub: /r0maks
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -207,7 +237,7 @@
       window.open(url, "_blank");
     }
     function activate() {
-      changeTab(5);
+      changeTab(1);
     }
     activate();
   </script>

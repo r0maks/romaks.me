@@ -42,7 +42,6 @@ main {
     justify-content: center;
 
     .content-card {
-        height: 400px;
         width: $site-width;
         background: $gray-color;
         border-radius: 2px;
@@ -105,8 +104,9 @@ main {
 }
 
 .contact {
+    width: 100%;
     .contact-content {
-        padding: 20px;
+        padding: 15px;
         font-size: 30px;
         font-family: $foco;
         font-weight: 300;
@@ -116,6 +116,7 @@ main {
         .contact-link {
             cursor: pointer;
             display: flex;
+            padding: 5px;
 
             .contact-icon {
                 margin-right: 10px;
