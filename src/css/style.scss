@@ -64,8 +64,8 @@ main {
         }
     }
     .about-me-content {
-        padding:20px;
-        padding-left: 30px;
+        padding: 10px;
+        padding-left: 20px;
         text-align: left;
         color: $dark-color;
         font-family: $menco;
@@ -74,7 +74,6 @@ main {
 
         .name {
             font-size: 30px;
-            line-height: 45px;
         }
         .by-line {
             font-size: 20px;
@@ -82,7 +81,7 @@ main {
 
         }
         .description {
-            font-size: 20px;
+            font-size: 18px;
             border-top: 1px solid $accent-color;
             padding-top: 5px;
             margin-top: 10px;
