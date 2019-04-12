@@ -248,8 +248,9 @@ header {
     background:$dark-color;
     padding: 10px;
     opacity: .9;
-    display: none;
+    visibility: hidden;
     box-shadow: 0 4px 6px -6px $dark-color;
+    transition: $ease-out;
 
     ul {
         padding: 2px;
@@ -260,7 +261,7 @@ header {
     }
 
     &-active {
-        display: flex;
+        visibility: initial;
     }
 }
 
