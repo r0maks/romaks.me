@@ -21,3 +21,26 @@
         padding-right: 25px;
     }
 }
+
+@media only screen and (max-width: 700px) {
+    // hide the other tab options
+    .about-me {
+        flex-direction: column !important;
+        
+        .about-me-content {
+            padding-top: 5px !important;
+
+            .by-line {
+                font-size: 18px !important;
+            }
+        }
+    
+        img {
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}

@@ -57,6 +57,7 @@ main {
     display: flex;
     flex-direction: row;
     .profile-image-container {
+        display: flex;
         img {
             max-height: 400px;
             border-radius: 2px;
@@ -248,6 +249,7 @@ header {
     padding: 10px;
     opacity: .9;
     display: none;
+    box-shadow: 0 4px 6px -6px $dark-color;
 
     ul {
         padding: 2px;
