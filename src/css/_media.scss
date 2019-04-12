@@ -1,35 +1,23 @@
-/*
- *******************
- *  MEDIA QUERIES  *
- *******************
-*/
 
-/* EXTRA LARGE DISPLAY */
 
-@media only screen and (max-width: 2400px) and (min-width: 1500px) {
 
+@media screen and (min-width: 901px) {
+    #hamburger {
+        display: none !important;
+    }
+    #burger-options {
+        display: none !important;
+    }
 }
+    
+@media only screen and (max-width: 900px) {
+    // hide the other tab options
+    .tab {
+        display: none !important;
+    }
 
-/* MEDIA FOR NOTEBOOK DISPLAY */
-
-@media only screen and (max-width: 1200px) and (min-width: 300px) {
-
-}
-
-/* MEDIA FOR TABLET DISPLAY */
-
-@media only screen and (max-width: 992px) and (min-width: 300px) {
-
-}
-
-/* MEDIA FOR MEDIUM MOBILE DISPLAY */
-
-@media only screen and (max-width: 768px) and (min-width: 300px) {
-
-}
-
-/* MEDIA FOR LITTLE MOBILE DISPLAY */
-
-@media only screen and (max-width: 480px) and (min-width: 300px) {
-
+    .header-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }

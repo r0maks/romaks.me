@@ -188,7 +188,7 @@ main {
 
 header {
     nav {
-        li {
+        .tab {
             margin-left: 15px;
             color: $light-color;
             font-family: mr-eaves-modern, sans-serif;
@@ -212,6 +212,17 @@ header {
             text-shadow: none;
             border-bottom: 2px solid $accent-color;
         }
+        #hamburger {
+            color: $light-color;
+            display: flex;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .active-burger {
+            color:$accent-color !important;
+        }
     }
 
     .header-image-container {
@@ -223,3 +234,31 @@ header {
         }
     }
 }
+
+.burger-options {
+    color: $light-color;
+    font-size: 36px;
+    font-family: mr-eaves-modern, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    background:$dark-color;
+    padding: 10px;
+    opacity: .9;
+    display: none;
+
+    ul {
+        padding: 2px;
+    }
+
+    .active-burger-tab {
+        color: $accent-color;
+    }
+
+    &-active {
+        display: flex;
+    }
+}
+

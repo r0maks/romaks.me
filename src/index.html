@@ -20,8 +20,7 @@
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title"
-    content="Román Maksimov - Software Engineer, Photographer, Designer, Visual Artist">
+  <meta name="apple-mobile-web-app-title" content="Román Maksimov - Software Engineer, Photographer, Designer, Visual Artist">
 
   <meta property="og:url" content="http://romaks.me">
   <meta property="og:type" content="website">
@@ -31,8 +30,8 @@
 
   <link rel="stylesheet" href="../build/css/app.bundle.css">
   <link rel="stylesheet" href="https://use.typekit.net/epg3ecn.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
 
   <!-- ****** faviconit.com favicons ****** -->
   <link rel="shortcut icon" href="/favicon.ico">
@@ -72,15 +71,27 @@
       </div>
       <nav>
         <ul>
-          <li id="tab-select-1" onclick="changeTab(1)">about</li>
-          <li id="tab-select-2" onclick="changeTab(2)">resumé</li>
-          <li id="tab-select-3" onclick="changeTab(3)">skills</li>
-          <li id="tab-select-4" onclick="changeTab(4)">portraits</li>
-          <li id="tab-select-5" onclick="changeTab(5)">contact</li>
+          <li class="tab" id="tab-select-1" onclick="changeTab(1)">about</li>
+          <li class="tab" id="tab-select-2" onclick="changeTab(2)">resumé</li>
+          <li class="tab" id="tab-select-3" onclick="changeTab(3)">skills</li>
+          <li class="tab" id="tab-select-4" onclick="changeTab(4)">portraits</li>
+          <li class="tab" id="tab-select-5" onclick="changeTab(5)">contact</li>
+          <li id="hamburger" onclick="burgerClicked()">
+            <span class="fa fa-bars"></span>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
+  <div id="burger-options" class="burger-options">
+    <ul>
+      <li id="burger-tab-1" onclick="changeTab(1)">about</li>
+      <li id="burger-tab-2" onclick="changeTab(2)">resumé</li>
+      <li id="burger-tab-3" onclick="changeTab(3)">skills</li>
+      <li id="burger-tab-4" onclick="changeTab(4)">portraits</li>
+      <li id="burger-tab-5" onclick="changeTab(5)">contact</li>
+    </ul>
+  </div>
 
   <!-- header end -->
 
@@ -97,12 +108,9 @@
             <br>
             <span class="by-line">Software Engineer, Photographer, Designer, Visual Artist</span>
             <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
               sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
             </p>
             <div class="ig-link" onclick="openNewTab('https://www.instagram.com/romaks')">
@@ -117,7 +125,8 @@
       <div class="tab-content" id="tab-2">
         <div class="resume">
           <div class="resume-section">
-            <div class="section-title"><i class="fas fa-code"></i> Experience</div>
+            <div class="section-title">
+              <i class="fas fa-code"></i> Experience</div>
 
             <div class="section-content">
               <span class="section-content-title">
@@ -127,11 +136,12 @@
                 April 2019 - Present
               </div>
               <div class="section-content-details">
-                As a developer with unique marketing ability, I was offered a new role to assist other departments with marketing, sales, and customer solutions support. <br>
-                - Providing self-service capabilities to customers <br>
-                - Sales collateral <br>
-                - System demos <br>
-                - On-site requirements gathering
+                As a developer with unique marketing ability, I was offered a new role to assist other departments with marketing, sales,
+                and customer solutions support.
+                <br> - Providing self-service capabilities to customers
+                <br> - Sales collateral
+                <br> - System demos
+                <br> - On-site requirements gathering
               </div>
             </div>
 
@@ -143,8 +153,8 @@
                 August 2018 – April 2019
               </div>
               <div class="section-content-details">
-                Scrum project lead on multiple revenue-generating, customer-facing feature projects. <br>
-                Project manager and developer (Angular 6, NgRx, C#, SQL) for feature team building brand new production
+                Scrum project lead on multiple revenue-generating, customer-facing feature projects.
+                <br> Project manager and developer (Angular 6, NgRx, C#, SQL) for feature team building brand new production
                 product going to market.
               </div>
             </div>
@@ -156,9 +166,10 @@
                 May 2016 – August 2018
               </div>
               <div class="section-content-details">
-                Accepted full-time offer <br>
-                Selected to represent the company at yearly NBAA and HAI industry trade shows where I demoed our
-                product offerings to potential customers and gathered feedback from existing customers. <br>
+                Accepted full-time offer
+                <br> Selected to represent the company at yearly NBAA and HAI industry trade shows where I demoed our product
+                offerings to potential customers and gathered feedback from existing customers.
+                <br>
               </div>
             </div>
             <div class="section-content">
@@ -169,13 +180,13 @@
                 November 2015 – May 2016
               </div>
               <div class="section-content-details">
-                Full stack development (HTML, CSS, AngularJs, C#, SQL) of Flightdocs aircraft maintenance tracking
-                Enterprise web application
+                Full stack development (HTML, CSS, AngularJs, C#, SQL) of Flightdocs aircraft maintenance tracking Enterprise web application
               </div>
             </div>
           </div>
           <div class="resume-section">
-            <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
+            <div class="section-title">
+              <i class="fas fa-graduation-cap"></i> Education</div>
             <div class="section-content">
               <span class="section-content-title">
                 Florida Gulf Coast University, Fort Myers, FL
@@ -293,15 +304,20 @@
     var tabMax = 5;
     var tabSelectorPrefix = 'tab-select-';
     var tabPrefix = 'tab-';
+    var burgerTabPrefix = 'burger-tab-';
+    var burgerId = 'hamburger';
+    var burgerOptionsId = 'burger-options';
+    var burgerActive = false;
     function changeTab(tabIndex) {
       if (tab === tabIndex) {
         return;
       }
       resetTabs();
+      burgerOff();
       hideElement(tabPrefix + tab);
       tab = tabIndex;
       showElement(tabPrefix + tabIndex);
-      setTabActive(tabSelectorPrefix + tab);
+      setTabActive(tab);
     }
     function showElement(elemId) {
       let elem = document.getElementById(elemId);
@@ -315,28 +331,59 @@
         elem.style.display = 'none';
       }
     }
-    function setTabInactive(tabElemId) {
-      let elem = document.getElementById(tabElemId);
+    function setTabInactive(tabIndex) {
+      let elem = document.getElementById(tabSelectorPrefix + tabIndex);
       if (elem) {
         elem.classList.remove('active-tab');
       }
+      elem = document.getElementById(burgerTabPrefix + tabIndex);
+      if (elem) {
+        elem.classList.remove('active-burger-tab');
+      }
     }
-    function setTabActive(tabElemId) {
-      let elem = document.getElementById(tabElemId);
+    function setTabActive(tabIndex) {
+      let elem = document.getElementById(tabSelectorPrefix + tabIndex);
       if (elem) {
         elem.classList.add('active-tab');
+      }
+
+      elem = document.getElementById(burgerTabPrefix + tabIndex);
+      if (elem) {
+        elem.classList.add('active-burger-tab');
       }
     }
     function resetTabs() {
       for (let index = 1; index <= tabMax; index++) {
-        setTabInactive(tabSelectorPrefix + index);
+        setTabInactive(index);
       }
     }
     function openNewTab(url) {
       window.open(url, "_blank");
     }
+    function burgerClicked() {
+      burgerActive = !burgerActive;
+      if (burgerActive) {
+        burgerOn();
+      } else {
+        burgerOff();
+      }
+    }
+    function burgerOff() {
+      burgerActive = false;
+      let elem = document.getElementById(burgerId);
+      elem.classList.remove('active-burger');
+      let bOptions = document.getElementById(burgerOptionsId);
+      bOptions.classList.remove('burger-options-active');
+    }
+    function burgerOn() {
+      burgerActive = true;
+      let elem = document.getElementById(burgerId);
+      elem.classList.add('active-burger');
+      let bOptions = document.getElementById(burgerOptionsId);
+      bOptions.classList.add('burger-options-active');
+    }
     function activate() {
-      changeTab(2);
+      changeTab(5);
     }
     activate();
   </script>
