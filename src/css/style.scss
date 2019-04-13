@@ -106,9 +106,7 @@ main {
 }
 
 .resume {
-    padding: 20px;
-    padding-left: 25px;
-    padding-bottom: 10px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 
@@ -117,7 +115,7 @@ main {
         margin-bottom: 10px;
         .section-title {
             font-family: $oswald;
-            font-size: 26px;
+            font-size: 22px;
             font-weight: 300;
             font-style: normal;
             background: $blue-color;
@@ -160,10 +158,48 @@ main {
     }
 }
 
+.skills {
+    padding: 20px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .skills-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        .skills-section{
+            width: 25%;
+            &-title {
+                font-family: $oswald;
+                font-size: 22px;
+                font-weight: 300;
+                font-style: normal;
+                color: $dark-color;
+                padding: 5px;
+                border-radius: 2px;
+            }
+            &-icon {
+                font-size: 30px;
+                color: $blue-color;
+            }
+            &-details {
+                padding: 10px;
+                font-family: $menco;
+                font-size: 18px;
+                font-weight: 300;
+                font-style: normal;
+                color: $dark-color;
+            }
+        }
+    }
+}
+
 .contact {
     width: 100%;
     .contact-content {
-        padding: 15px;
+        padding: 10px;
         font-size: 30px;
         font-family: $menco;
         font-weight: 300;
