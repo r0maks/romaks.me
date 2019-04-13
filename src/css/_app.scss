@@ -1,0 +1,27 @@
+/*
+ *******************
+ * PAGE MAIN STYLE *
+ *******************
+*/
+
+body {
+  user-select: none;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+
+  nav {
+    float: right;
+
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+

@@ -1,0 +1,302 @@
+@import "variables";
+
+/*--------------------------------------------------------------
+# Normalize & Print
+--------------------------------------------------------------*/
+@import "normalize";
+@import "print";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+/**Optionally add Bootstrap to your project**/
+/* @import "~bootstrap/scss/bootstrap"; */
+@import "app";
+
+/*--------------------------------------------------------------
+# Responsive Bug Fixes
+--------------------------------------------------------------*/
+@import "media";
+
+
+body {
+    background: $dark-color;
+}
+
+.accent-text {
+    color: $accent-color;
+}
+
+header {
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        width: $site-width;
+    }
+}
+
+main {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+
+    .content-card {
+        width: $site-width;
+        background: $light-color;
+        border-radius: 2px;
+        box-shadow: 0 10px 6px -6px $dark-color;
+
+        .tab-content {
+            display: none; // gets set thru JS
+            transition: $ease-out;
+        }
+    }
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    .profile-image-container {
+        display: flex;
+        img {
+            max-height: 400px;
+            border-radius: 2px;
+        }
+    }
+    .about-me-content {
+        padding: 10px;
+        padding-left: 20px;
+        text-align: left;
+        color: $dark-color;
+        font-family: $menco;
+        font-weight: 300;
+        font-style: normal;
+
+        .name {
+            font-size: 30px;
+        }
+        .by-line {
+            font-size: 20px;
+            font-family: $oswald;
+
+        }
+        .description {
+            font-size: 18px;
+            border-top: 1px solid $accent-color;
+            padding-top: 5px;
+            margin-top: 10px;
+        }
+        .ig-link {
+            cursor: pointer;
+            color: $light-color;
+            font-size: 16px;
+            margin-top: 20px;
+            background:$blue-color;
+            padding: 3px;
+            border-radius: 2px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: center;
+
+            &:hover {
+                background: $alt-blue-color;
+            }
+        }
+    }
+}
+
+.resume {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .resume-section {
+        text-align: left;
+        margin-bottom: 10px;
+        .section-title {
+            font-family: $oswald;
+            font-size: 22px;
+            font-weight: 300;
+            font-style: normal;
+            background: $blue-color;
+            color: $light-color;
+            padding: 5px;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-content {
+            margin-bottom: 10px;
+            margin-left: 10px;
+            &-title {
+                font-family: $oswald;
+                font-size: 20px;
+                font-weight: 300;
+                font-style: normal;
+                color: $dark-color;
+                text-decoration: underline;
+            }
+            &-byline {
+                font-family: $menco;
+                font-size: 18px;
+                font-weight: 300;
+                font-style: normal;
+                color: $blue-color;
+                margin-left:15px;
+                margin-top: 5px;
+            }
+            &-details {
+                margin-top: 5px;
+                font-family: $menco;
+                font-size: 18px;
+                font-weight: 300;
+                font-style: normal;
+                color: $dark-color;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+.skills {
+    padding: 20px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .skills-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        .skills-section{
+            width: 25%;
+            &-title {
+                font-family: $oswald;
+                font-size: 23px;
+                font-weight: 300;
+                font-style: normal;
+                color: $dark-color;
+                padding: 5px;
+                border-radius: 2px;
+            }
+            &-icon {
+                font-size: 35px;
+                color: $blue-color;
+            }
+            &-details {
+                padding: 10px;
+                font-family: $menco;
+                font-size: 18px;
+                font-weight: 300;
+                font-style: normal;
+                color: $dark-color;
+            }
+        }
+    }
+}
+
+.contact {
+    width: 100%;
+    .contact-content {
+        padding: 10px;
+        font-size: 30px;
+        font-family: $menco;
+        font-weight: 300;
+        font-style: normal;
+        color: $dark-color;
+
+        .contact-link {
+            cursor: pointer;
+            display: flex;
+            padding: 5px;
+
+            .contact-icon {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                color: $blue-color;
+            }
+        }
+    }
+}
+
+header {
+    nav {
+        .tab {
+            margin-left: 15px;
+            color: $light-color;
+            font-family: mr-eaves-modern, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 30px;
+            cursor: pointer;
+            border-bottom: 2px solid $dark-color;
+
+            &:hover {
+                color:$accent-color;
+                transition: $ease-out;
+                transform: scale(1.05);
+                text-shadow: none;
+            }
+        }
+        .active-tab {
+            color:$accent-color;
+            transition: $ease-out;
+            transform: scale(1.05);
+            text-shadow: none;
+            border-bottom: 2px solid $accent-color;
+        }
+        #hamburger {
+            color: $light-color;
+            display: flex;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .active-burger {
+            color:$accent-color !important;
+        }
+    }
+
+    .header-image-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        img {
+            max-height: 25px;
+        }
+    }
+}
+
+.burger-options {
+    color: $light-color;
+    font-size: 36px;
+    font-family: mr-eaves-modern, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    background:$dark-color;
+    padding: 10px;
+    opacity: .9;
+    visibility: hidden;
+    box-shadow: 0 4px 6px -6px $dark-color;
+    transition: $ease-out;
+
+    ul {
+        padding: 2px;
+    }
+
+    .active-burger-tab {
+        color: $accent-color;
+    }
+
+    &-active {
+        visibility: initial;
+    }
+}
+
