@@ -47,4 +47,15 @@
             height: auto;
         }
     }
+
+    .skills {
+        .skills-content {
+            flex-direction: column !important;
+
+            .skills-section {
+                width: 100% !important;
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
