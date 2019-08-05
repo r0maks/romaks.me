@@ -11,6 +11,12 @@
 }
     
 @media only screen and (max-width: 900px) {
+
+    main .content-card {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
     // hide the other tab options
     .tab {
         display: none !important;
@@ -19,14 +25,10 @@
     .by-line {
         font-size: 18px !important;
     }
-
-    .header-content {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
 }
 
 @media only screen and (max-width: 700px) {
+
     // hide the other tab options
     .about-me {
         flex-direction: column !important;
