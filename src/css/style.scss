@@ -28,6 +28,7 @@ body {
 }
 
 header {
+    background: $dark-color;
     .header-content {
         display: flex;
         justify-content: space-between;
@@ -37,6 +38,7 @@ header {
 
 main {
     padding-top: 15px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 
@@ -78,9 +80,8 @@ main {
             font-size: 30px;
         }
         .by-line {
-            font-size: 20px;
+            font-size: 22px;
             font-family: $oswald;
-
         }
         .description {
             font-size: 18px;
@@ -94,11 +95,9 @@ main {
             font-size: 16px;
             margin-top: 20px;
             background:$blue-color;
-            padding: 3px;
             border-radius: 2px;
-            padding-top: 5px;
-            padding-bottom: 7px;
             text-align: center;
+            padding: 8px;
 
             &:hover {
                 background: $alt-blue-color;
@@ -279,7 +278,7 @@ header {
     font-family: mr-eaves-modern, sans-serif;
     font-weight: 300;
     font-style: normal;
-    position: absolute;
+    position: fixed;
     justify-content: center;
     width: 100%;
     background:$dark-color;
@@ -291,6 +290,7 @@ header {
 
     ul {
         padding: 2px;
+        cursor: pointer;
     }
 
     .active-burger-tab {

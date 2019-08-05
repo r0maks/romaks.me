@@ -5,8 +5,8 @@
 */
 
 body {
-  user-select: none;
-}
+  // user-select: none;
+} 
 
 /* HEADER */
 
@@ -14,6 +14,10 @@ header {
   display: flex;
   justify-content: space-evenly;
   padding-top: 10px;
+  position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 14px;
 
   nav {
     float: right;
