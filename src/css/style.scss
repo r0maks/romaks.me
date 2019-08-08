@@ -227,6 +227,23 @@ main {
         font-weight: 300;
         font-style: normal;
         color: $dark-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .photos-viewer {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top;
+            border-radius: 2px;
+            width: 100%;
+            min-height: 500px;
+            max-height: 500px;
+        }
+        .photo-controls {
+            padding: 5px;
+            padding-top: 10px;
+        }
     }
 }
 
@@ -280,7 +297,7 @@ header {
 
 .burger-options {
     color: $light-color;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 300;
     font-style: normal;
     position: fixed;
@@ -296,6 +313,10 @@ header {
     ul {
         padding: 2px;
         cursor: pointer;
+
+        li {
+            padding: 5px;
+        }
     }
 
     .active-burger-tab {
@@ -314,3 +335,9 @@ footer {
     padding: 10px;
 }
 
+button {
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 20px;
+}
+button:focus {outline:0;}

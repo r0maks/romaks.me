@@ -27,16 +27,16 @@
   <meta property="og:site_name" content="Romaks">
 
   <link rel="stylesheet" href="../build/css/app.bundle.css">
-  <link rel="stylesheet" href="https://use.typekit.net/yon7aox.css">  
+  <link rel="stylesheet" href="https://use.typekit.net/yon7aox.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
     crossorigin="anonymous">
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="http://romaks.me/">
-<meta property="twitter:title" content="Román Maksimov - Software Engineer, Photographer, Designer, Visual Artist">
-<meta property="twitter:description" content="Freelance Web Developer, Designer, Photographer based in sunny SWFL">
-<meta property="twitter:image" content="http://romaks.me/romaks.png">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="http://romaks.me/">
+  <meta property="twitter:title" content="Román Maksimov - Software Engineer, Photographer, Designer, Visual Artist">
+  <meta property="twitter:description" content="Freelance Web Developer, Designer, Photographer based in sunny SWFL">
+  <meta property="twitter:image" content="http://romaks.me/romaks.png">
 
   <!-- ****** faviconit.com favicons ****** -->
   <link rel="shortcut icon" href="images/favicon.ico">
@@ -79,7 +79,7 @@
           <li class="tab" id="tab-select-1" onclick="changeTab(1)">about</li>
           <li class="tab" id="tab-select-2" onclick="changeTab(2)">resumé</li>
           <li class="tab" id="tab-select-3" onclick="changeTab(3)">skills</li>
-          <!-- <li class="tab" id="tab-select-4" onclick="changeTab(4)">photos</li> -->
+          <li class="tab" id="tab-select-4" onclick="changeTab(4)">photos</li>
           <li class="tab" id="tab-select-5" onclick="changeTab(5)">contact</li>
           <li id="hamburger" onclick="burgerClicked()">
             <span class="fa fa-bars"></span>
@@ -93,7 +93,7 @@
       <li id="burger-tab-1" onclick="changeTab(1)">about</li>
       <li id="burger-tab-2" onclick="changeTab(2)">resumé</li>
       <li id="burger-tab-3" onclick="changeTab(3)">skills</li>
-      <!-- <li id="burger-tab-4" onclick="changeTab(4)">photos</li> -->
+      <li id="burger-tab-4" onclick="changeTab(4)">photos</li>
       <li id="burger-tab-5" onclick="changeTab(5)">contact</li>
     </ul>
   </div>
@@ -144,7 +144,8 @@
                 June 2019 - Present
               </div>
               <div class="section-content-details">
-                As a freelancer, I leverage my design, development skills, and experience to build engaging user interfaces based on client requirements and design principles.
+                As a freelancer, I leverage my design, development skills, and experience to build engaging user interfaces based on client
+                requirements and design principles.
               </div>
             </div>
 
@@ -156,7 +157,8 @@
                 April 2019 - June 2019
               </div>
               <div class="section-content-details">
-                I was offered a new role to assist the company with the technical aspects of marketing because of my product development experience and the knowledge I had of the industry.
+                I was offered a new role to assist the company with the technical aspects of marketing because of my product development
+                experience and the knowledge I had of the industry.
                 <br> - Designing and implementing web marketing strategies
                 <br> - Providing self-service capabilities to customers
                 <br> - Sales collateral
@@ -174,8 +176,8 @@
               </div>
               <div class="section-content-details">
                 Scrum project lead on multiple revenue-generating, customer-facing feature projects.
-                <br> Project manager and developer (Angular, NgRx, C#, SQL) for feature team building brand new production
-                product going to market.
+                <br> Project manager and developer (Angular, NgRx, C#, SQL) for feature team building brand new production product
+                going to market.
               </div>
             </div>
             <div class="section-content">
@@ -302,11 +304,14 @@
       <div class="tab-content" id="tab-4">
         <div class="photos">
           <div class="photos-content">
-
+            <div id="photoViewer" class="photos-viewer"></div>
+            <div class="photo-controls">
+              <button onclick="setImage(-1)"><i class="fas fa-chevron-left"></i></button>
+              <button onclick="setImage(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
           </div>
         </div>
       </div>
-
 
       <!-- contact (5) -->
       <!-- TODO: obfuscate personal data -->
@@ -371,11 +376,14 @@
 
     </div>
   </main>
-  <footer>All content © <script>document.write(new Date().getFullYear())</script>, Román Maksimov</footer>
+  <footer>All content ©
+    <script>document.write(new Date().getFullYear())</script>, Román Maksimov</footer>
   <script type="text/javascript" src="../build/app.js"></script>
   <script>
     var tab = 0;
     var tabMax = 5;
+    var imgCount = 2;
+    var currentImgIndex = 0;
     var tabSelectorPrefix = 'tab-select-';
     var tabPrefix = 'tab-';
     var burgerTabPrefix = 'burger-tab-';
@@ -457,8 +465,24 @@
     }
     function activate() {
       changeTab(1);
+      setImage(0);
+    }
+    function setImage(offset) {
+      const imgIndex = currentImgIndex + offset;
+      // if the new imgIndex TODO: check if image index is valid first
+
+      if (imgIndex >= 0 && imgIndex + 1 <= imgCount) {
+        const newImgName = imgIndex + '.jpg';
+        const urlStr = "url('images/" + newImgName + "')";
+        // get photoviewer by ID
+        let photoViewer = document.getElementById('photoViewer');
+        photoViewer.style.backgroundImage = urlStr;
+        currentImgIndex = imgIndex;
+      }
+
     }
     activate();
   </script>
 </body>
+
 </html>
