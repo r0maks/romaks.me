@@ -21,6 +21,7 @@
 
 body {
     background: $dark-color;
+    font-family: rubik, sans-serif;
 }
 
 .accent-text {
@@ -37,7 +38,7 @@ header {
 }
 
 main {
-    padding-top: 15px;
+    padding-top: 6px;
     margin-top: 50px;
     display: flex;
     justify-content: center;
@@ -72,7 +73,6 @@ main {
         padding: 20px;
         text-align: left;
         color: $dark-color;
-        font-family: $menco;
         font-weight: 300;
         font-style: normal;
 
@@ -80,8 +80,8 @@ main {
             font-size: 30px;
         }
         .by-line {
-            font-size: 22px;
-            font-family: $oswald;
+            font-size: 20px;
+            font-weight: 100;
         }
         .description {
             font-size: 18px;
@@ -115,9 +115,8 @@ main {
         text-align: left;
         margin-bottom: 10px;
         .section-title {
-            font-family: $oswald;
             font-size: 22px;
-            font-weight: 300;
+            font-weight: 400;
             font-style: normal;
             background: $blue-color;
             color: $light-color;
@@ -128,19 +127,17 @@ main {
 
         .section-content {
             margin-bottom: 20px;
+            margin-top: 20px;
             margin-left: 10px;
             &-title {
-                font-family: $oswald;
                 font-size: 20px;
-                font-weight: 300;
+                font-weight: 400;
                 font-style: normal;
                 color: $dark-color;
-                text-decoration: underline;
             }
             &-byline {
-                font-family: $menco;
                 font-size: 18px;
-                font-weight: 300;
+                font-weight: 400;
                 font-style: normal;
                 color: $blue-color;
                 margin-left:15px;
@@ -148,7 +145,6 @@ main {
             }
             &-details {
                 margin-top: 5px;
-                font-family: $menco;
                 font-size: 18px;
                 font-weight: 300;
                 font-style: normal;
@@ -173,13 +169,13 @@ main {
         .skills-section{
             width: 25%;
             &-title {
-                font-family: $oswald;
-                font-size: 23px;
-                font-weight: 300;
+                font-size: 20px;
+                font-weight: 500;
                 font-style: normal;
                 color: $dark-color;
                 padding: 5px;
                 border-radius: 2px;
+                padding-top: 11px;
             }
             &-icon {
                 font-size: 35px;
@@ -187,7 +183,8 @@ main {
             }
             &-details {
                 padding: 10px;
-                font-family: $menco;
+                padding-left: 5px;
+                padding-right: 5px;
                 font-size: 18px;
                 font-weight: 300;
                 font-style: normal;
@@ -202,7 +199,6 @@ main {
     .contact-content {
         padding: 10px;
         font-size: 30px;
-        font-family: $menco;
         font-weight: 300;
         font-style: normal;
         color: $dark-color;
@@ -223,15 +219,25 @@ main {
     }
 }
 
+.photos {
+    width: 100%;
+    .photos-content {
+        padding: 10px;
+        font-size: 30px;
+        font-weight: 300;
+        font-style: normal;
+        color: $dark-color;
+    }
+}
+
 header {
     nav {
         .tab {
             margin-left: 15px;
             color: $light-color;
-            font-family: mr-eaves-modern, sans-serif;
-            font-weight: 300;
             font-style: normal;
-            font-size: 30px;
+            font-size: 22px;
+            font-weight: 200;
             cursor: pointer;
             border-bottom: 2px solid $dark-color;
 
@@ -275,7 +281,6 @@ header {
 .burger-options {
     color: $light-color;
     font-size: 36px;
-    font-family: mr-eaves-modern, sans-serif;
     font-weight: 300;
     font-style: normal;
     position: fixed;
@@ -304,7 +309,6 @@ header {
 
 footer {
     color: $light-color;
-    font-family: mr-eaves-modern, sans-serif;
     font-weight: 300;
     font-style: normal;
     padding: 10px;
