@@ -13,11 +13,12 @@ body {
 header {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 10px;
+  padding: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
   position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 14px;
+  top: 0;
+  width: 100%;
 
   nav {
     float: right;

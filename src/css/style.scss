@@ -75,6 +75,7 @@ main {
         color: $dark-color;
         font-weight: 300;
         font-style: normal;
+        padding-bottom: 10px;
 
         .name {
             font-size: 30px;
@@ -88,20 +89,31 @@ main {
             border-top: 1px solid $accent-color;
             padding-top: 10px;
             margin-top: 14px;
+            margin-bottom: 10px;
         }
-        .ig-link {
+        .ig-link, .pixelplay-link {
             cursor: pointer;
             color: $light-color;
             font-size: 16px;
-            margin-top: 20px;
-            background:$blue-color;
+            margin-top: 5px;
             border-radius: 2px;
             text-align: center;
             padding: 8px;
 
+            img {
+                vertical-align: bottom;
+            }
+
             &:hover {
                 background: $alt-blue-color;
             }
+        }
+
+        .ig-link {
+            background:$blue-color;
+        }
+        .pixelplay-link {
+            background: #c0392b;
         }
     }
 }
@@ -280,7 +292,7 @@ header {
 
 .burger-options {
     color: $light-color;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 300;
     font-style: normal;
     position: fixed;
@@ -288,7 +300,7 @@ header {
     width: 100%;
     background:$dark-color;
     padding: 10px;
-    opacity: .9;
+    opacity: .99;
     visibility: hidden;
     box-shadow: 0 4px 6px -6px $dark-color;
     transition: $ease-out;
