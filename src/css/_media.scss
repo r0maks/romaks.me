@@ -32,20 +32,18 @@
     // hide the other tab options
     .about-me {
         flex-direction: column !important;
+
+        .profile-image-container {
+            height: 200px;
+            width: 100% !important;
+            background-position: center !important;
+        }
         
         .about-me-content {
 
             .by-line {
                 font-size: 18px !important;
             }
-        }
-    
-        img {
-            margin-right: auto;
-            margin-left: auto;
-            display: block;
-            max-width: 100%;
-            height: auto;
         }
     }
 

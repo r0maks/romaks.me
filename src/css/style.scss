@@ -61,7 +61,7 @@ main {
     flex-direction: row;
     .profile-image-container {
         display: flex;
-        background-image: url('http://romaks.me/images/profile.jpg');
+        background-image: url('http://romaks.me/images/portrait2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
@@ -88,20 +88,31 @@ main {
             border-top: 1px solid $accent-color;
             padding-top: 10px;
             margin-top: 14px;
+            margin-bottom: 20px;
         }
-        .ig-link {
+        .ig-link, .pixelplay-link {
             cursor: pointer;
             color: $light-color;
             font-size: 16px;
-            margin-top: 20px;
-            background:$blue-color;
+            margin-top: 5px;
             border-radius: 2px;
             text-align: center;
             padding: 8px;
 
+            img {
+                vertical-align: bottom;
+            }
+
             &:hover {
                 background: $alt-blue-color;
             }
+        }
+
+        .ig-link {
+            background:$blue-color;
+        }
+        .pixelplay-link {
+            background: #c0392b;
         }
     }
 }
@@ -305,7 +316,7 @@ header {
     width: 100%;
     background:$dark-color;
     padding: 10px;
-    opacity: .9;
+    opacity: .99;
     visibility: hidden;
     box-shadow: 0 4px 6px -6px $dark-color;
     transition: $ease-out;
