@@ -19,6 +19,10 @@
 @import "media";
 
 
+::selection {
+    background: $accent-color; /* WebKit/Blink Browsers */
+  }
+
 body {
     background: $dark-color;
     font-family: rubik, sans-serif;
