@@ -38,6 +38,12 @@ header {
         display: flex;
         justify-content: space-between;
         width: $site-width;
+
+        ul {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-column-gap: 12px;
+        }
     }
 }
 
@@ -184,7 +190,7 @@ main {
         .skills-section{
             width: 25%;
             &-title {
-                font-size: 20px;
+                font-size: 1rem;
                 font-weight: 500;
                 font-style: normal;
                 color: $dark-color;
@@ -248,7 +254,6 @@ main {
 header {
     nav {
         .tab {
-            margin-left: 15px;
             color: $light-color;
             font-style: normal;
             font-size: 22px;

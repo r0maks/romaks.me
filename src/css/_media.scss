@@ -17,6 +17,12 @@
         margin-right: 10px;
     }
 
+    .header-content {
+        ul {
+            display: block !important;
+        }
+    }
+
     // hide the other tab options
     .tab {
         display: none !important;
